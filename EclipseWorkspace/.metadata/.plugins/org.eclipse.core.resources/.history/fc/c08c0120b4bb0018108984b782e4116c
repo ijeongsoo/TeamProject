@@ -1,0 +1,38 @@
+package com.IBK.study03;
+
+import java.beans.Customizer;
+
+public class MaintTest {
+	
+	public static void print(Custormer c){
+		System.out.println(c.toString()); 
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Custormer custormer = new Custormer(){
+			@Override
+			public int getAge() {
+				// TODO Auto-generated method stub
+				return 11111111;
+			}
+		};
+		
+		System.out.println(custormer.getAge());
+		Custormer vc = new VipCustomer();
+		System.out.println(vc.k);
+		System.out.println(((VipCustomer)vc).k);
+		
+		print(custormer);
+		print(vc);
+		print(new Custormer(){
+			@Override
+		
+			public String toString() {
+				// TODO Auto-generated method stub
+				return super.toString();
+			}
+		});
+	}
+
+}

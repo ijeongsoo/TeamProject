@@ -1,0 +1,38 @@
+package com.IBK.study02.project;
+
+public class Magazine extends Book{
+	String isbn;
+	String title;
+	int year;
+	int month;
+	String author;
+	String publisher;
+	int price;
+	String desc="";
+	
+	public Magazine() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Magazine(String isbn, String title, int year, int month, String author, String publisher, int price,
+			String desc) {
+		super();
+		this.year = year;
+		this.month = month;
+
+	}
+	
+	public Magazine(String isbn, String title, int year, String author) {
+		super();
+		this.isbn = isbn;
+		this.title = title;
+		this.year = year;
+		this.author = author;
+
+	}
+	
+	public String toString(){
+		String msg = isbn +"\t|"+title+"\t|"+author+"\t|"+publisher+"\t|"+price+"\t|"+desc;
+		return msg;
+	}
+}

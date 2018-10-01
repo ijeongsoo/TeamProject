@@ -1,0 +1,61 @@
+package com.IBK.study02.project;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class MainTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String select;
+		ArrayList<Magazine> arr = new ArrayList<>();
+		
+		System.out.println("도서 관리 프로그램 실행");
+		while(true){
+			System.out.println("원하시는 기능을 선택하세요 : ");
+			System.out.println("1 : 도서 출력");
+			System.out.println("2 : 도서 입력");
+			
+			System.out.print("입력 > ");
+			
+			select = sc.nextLine();
+			if(select.equals("q")||select.equals("Q")){
+				break;
+			}
+			
+			if(select.equals("1")){
+				System.out.println(arr.size());
+				for(int i=0; i<arr.size(); i++){
+						arr.get(i).toString();
+				}
+			}else if(select.equals("2")){
+				System.out.print("번호 :");
+				String isbn = sc.nextLine();
+				System.out.print("제목 :");
+				String title = sc.nextLine();
+				System.out.print("년도 :");
+				int year = Integer.parseInt(sc.nextLine());
+				System.out.print("달 :");
+				int month = Integer.parseInt(sc.nextLine());
+				System.out.print("저자 :");
+				String author = sc.nextLine();
+				System.out.print("출판사 :");
+				String publisher = sc.nextLine();
+				System.out.print("가격 :");
+				int price = Integer.parseInt(sc.nextLine());
+				System.out.print("설명 :");
+				String desc = sc.nextLine();
+				
+				arr.add(new Magazine(isbn, title, year, month, author, publisher, price, desc));
+				
+				
+			}else{
+				System.out.println("올바른 번호를 입력하세요.");
+			}
+		}
+		
+
+	}
+
+}

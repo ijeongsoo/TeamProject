@@ -1,0 +1,5 @@
+package com.IBK.study03.project2;
+
+public interface IManager {
+
+}

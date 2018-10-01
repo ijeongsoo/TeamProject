@@ -1,0 +1,15 @@
+package com.IBK.study01;
+
+public class Hello {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 5;
+		int b = 13;
+		int res = a+b ;
+		
+		System.out.println("res = " + res);
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.IBK.study03;
+
+public class VipCustomer extends Custormer{
+	
+	public int k= 20;
+	
+	public VipCustomer() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public VipCustomer(String name, int age, String hobby){
+		super(name, age, hobby);
+		
+	}
+
+	@Override
+	public String toString() {
+		return "VipCustomer [getName()=" + getName() + ", getAge()=" + getAge() + ", getHobby()=" + getHobby()
+				+ ", toString()=" + super.toString() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ "]";
+	}
+
+}

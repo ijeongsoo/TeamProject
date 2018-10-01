@@ -1,0 +1,15 @@
+package com.IBK.study03.project;
+
+public class Dog extends Animal {
+	
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		System.out.println("걷는다. ");
+	}
+	
+	public void bark(){
+		System.out.println("멍멍");
+	}
+	
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.IBK.study01.Product"/>
+<fullyQualifiedTypeName name="com.IBK.study02.Book"/>
+<fullyQualifiedTypeName name="com.IBK.study02.Magazine"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="com.IBK.study02.project.Magazine"/>
+<fullyQualifiedTypeName name="java.beans.Customizer"/>
+<fullyQualifiedTypeName name="com.IBK.study03.VipCustomer"/>
+<fullyQualifiedTypeName name="com.IBK.study03.Custormer"/>
+<fullyQualifiedTypeName name="com.IBK.study03.TestImple"/>
+<fullyQualifiedTypeName name="com.IBK.study02.project.Book"/>
+<fullyQualifiedTypeName name="com.IBK.study03.project2.IManager"/>
+<fullyQualifiedTypeName name="com.IBK.study03.project2.ArrayManager"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="com.IBK.study03.project2.Singleton"/>
+</qualifiedTypeNameHistroy>

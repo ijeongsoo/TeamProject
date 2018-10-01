@@ -1,0 +1,15 @@
+package com.IBK.study03;
+
+public class MaintTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Custormer custormer = new  Custormer(){
+			@Override
+			public int getAge() {
+				// TODO Auto-generated method stub
+				return super.getAge();
+			}
+		};
+
+}

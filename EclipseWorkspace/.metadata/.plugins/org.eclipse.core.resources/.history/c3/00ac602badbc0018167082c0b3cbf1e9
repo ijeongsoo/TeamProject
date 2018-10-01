@@ -1,0 +1,10 @@
+package com.IBK.study03.project2;
+
+public class Singleton {
+	private Singleton s = new Singleton();
+	
+	private Singleton() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

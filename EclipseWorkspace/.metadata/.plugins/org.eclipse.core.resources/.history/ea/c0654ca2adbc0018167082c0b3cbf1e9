@@ -1,0 +1,30 @@
+package com.IBK.study03.project2;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class FileStreamExample {
+
+	public static void main(String[] args) {
+		
+		String line;
+		// TODO Auto-generated method stub
+		try {
+			char[] temp = new char[100];
+			FileReader fr = new FileReader("/Users/ijeongsu/Desktop/data.txt");
+			BufferedReader br = new BufferedReader(fr);
+			while((line=br.readLine())!=null){
+				System.out.println(line);	
+			}
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			
+		}
+	}
+
+}

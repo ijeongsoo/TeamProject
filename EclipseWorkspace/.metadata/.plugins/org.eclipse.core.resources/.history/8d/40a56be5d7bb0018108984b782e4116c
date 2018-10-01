@@ -1,0 +1,5 @@
+package com.IBK.study03.project;
+
+public class Dog extends Animal {
+
+}
