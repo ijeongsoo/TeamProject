@@ -1,0 +1,8 @@
+127.0.0.1 - - [02/Oct/2018:15:25:31 +0900] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [02/Oct/2018:15:25:32 +0900] "GET /ITEP/ HTTP/1.1" 200 569
+127.0.0.1 - - [02/Oct/2018:15:26:09 +0900] "GET /ITEP HTTP/1.1" 302 -
+127.0.0.1 - - [02/Oct/2018:15:26:09 +0900] "GET /ITEP/ HTTP/1.1" 200 569
+127.0.0.1 - - [02/Oct/2018:15:26:09 +0900] "GET /ITEP/resources/bootstrap-3.3.7/js/bootstrap.min.js HTTP/1.1" 200 37045
+127.0.0.1 - - [02/Oct/2018:15:26:09 +0900] "GET /ITEP/resources/bootstrap-3.3.7/css/bootstrap.min.css HTTP/1.1" 200 121200
+127.0.0.1 - - [02/Oct/2018:15:26:09 +0900] "GET /ITEP/resources/jquery/jquery-3.2.1.min.js HTTP/1.1" 200 86659
+127.0.0.1 - - [02/Oct/2018:15:26:09 +0900] "GET /favicon.ico HTTP/1.1" 404 1016
