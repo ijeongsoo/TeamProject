@@ -22,7 +22,7 @@
 	</beans:bean>
 	
 	<!-- 어떤 패키지부터 @어노테이션을 찾아서 사용할 건지 설정 -->
-	<context:component-scan base-package="com.mycompany.myapp" />
+	<context:component-scan base-package="kr.co.ibk.itep.controller" />
 	
 	<!-- 멀티파트로 파일이 업로드될때 해석하기 위한 설정 -->
 	<beans:bean id="multipartResolver"
