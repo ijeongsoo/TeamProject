@@ -1,0 +1,28 @@
+package kr.co.ibk.itep.dao;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+
+import kr.co.ibk.itep.dto.EmpJoinedDep;
+
+
+@Component
+public class DaoImpl implements Dao {
+	@Autowired
+	private SqlSessionTemplate sst;
+
+	@Override
+	public EmpJoinedDep selectByEmn(String emn) {
+		// TODO Auto-generated method stub
+		
+		EmpJoinedDep empJoinedDep=sst.selectOne("empJoinedDep.selectByEmn", emn);
+		return null;
+	}
+
+	
+
+}

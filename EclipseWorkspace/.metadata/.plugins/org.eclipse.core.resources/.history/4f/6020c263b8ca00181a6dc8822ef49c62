@@ -1,0 +1,11 @@
+package kr.co.ibk.itep.service;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public interface Service {
+
+
+
+
+}

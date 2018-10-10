@@ -1,0 +1,15 @@
+package kr.co.ibk.itep.service;
+
+import org.springframework.stereotype.Component;
+
+import kr.co.ibk.itep.dto.EmpJoinedDep;
+
+
+@Component
+public interface Service {
+
+	public EmpJoinedDep ssoLogin(String emn);
+
+	public void fileUploader();
+
+}

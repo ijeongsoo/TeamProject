@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/Users/ijeongsu/Desktop/IotCourse/GitRepository/TestRepository/EclipseWorkspace/SpringWebProgramming"/>
 		<item value="/Users/ijeongsu/Desktop/IBK/GitRepository/TeamProject/EclipseWorkspace/ITEP"/>
 		<item value="/Users/ijeongsu/Desktop/IBK/backup/EclipseWorkspace/PhotoBoard"/>
 		<item value="/Users/ijeongsu/Desktop/IBK/backup/EclipseWorkspace/Team2DroneWebControl"/>

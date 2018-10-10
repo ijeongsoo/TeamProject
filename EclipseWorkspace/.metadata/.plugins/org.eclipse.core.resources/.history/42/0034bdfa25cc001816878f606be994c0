@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="emp001m">
+
+	<select id= "selectByEmn" resultType="kr.co.ibk.itep.dto.EmpJoinedDep" parameterType="string">
+		select emn, emm, blng_brcd, auth_cd, brcd, krn_brm from TB_IEP_EMP001M, TB_IEP_DEP001M where emn=#{emn}	
+
+	</select>
+	
+
+	
+</mapper>
