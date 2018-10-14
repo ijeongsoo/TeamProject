@@ -13,7 +13,7 @@
 	</head>
 	
 	<body>
-		<h4>LoginPage</h4>
+		<h4 >LoginPage</h4>
 		<hr/>
 	</body>
 </html>

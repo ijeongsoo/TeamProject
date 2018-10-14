@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.context.request.RequestContextHolder;
 
 import kr.co.ibk.itep.dto.EmpJoinedDep;
 import kr.co.ibk.itep.service.Service;
@@ -34,5 +36,6 @@ public class SessionedController {
 	public String home(@ModelAttribute EmpJoinedDep login_info, String ssoid, Model model) {
 		return "home";
 	} 
+
 	
 }
