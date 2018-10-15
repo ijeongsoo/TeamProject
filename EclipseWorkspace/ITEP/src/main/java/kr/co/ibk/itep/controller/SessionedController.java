@@ -91,7 +91,7 @@ public class SessionedController {
 	}
 
 	@RequestMapping("/admin")
-	public String home(String ssoid, Model model) {
+	public String admin(String ssoid, Model model) {
 		model.addAttribute("ssoid", ssoid);
 		return "admin";
 	} 
