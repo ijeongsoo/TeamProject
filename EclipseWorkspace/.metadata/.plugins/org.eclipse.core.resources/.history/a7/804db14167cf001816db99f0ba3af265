@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@font-face{
+font-family:jua;
+src:url('BM-HANNA.eot');
+src:local(※), 
+	url('BM-HANNA.woff') format('woff');
+}
+
+
+.hanna{
+	font-family: jua;
+	font-weight: normal;
+	margin: 0;
+	padding: 10px;
+}

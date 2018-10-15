@@ -1,2 +1,15 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
+=======
+filteredSearchResultIndicationColor=7,54,66
+hyperlinkColor=102,175,249
+hyperlinkColor.SystemDefault=false
+infoIndicationColor=86,194,170
+lineNumberColor=196,173,37
+linked.slave.color=66,156,255
+matchingTagIndicationColor=72,72,72
+occurrenceIndicationColor=109,102,45
+overriddenByCSS=,AbstractTextEditor.Color.Background.SystemDefault,AbstractTextEditor.Color.SelectionForeground.SystemDefault,AbstractTextEditor.Color.SelectionBackground.SystemDefault,AbstractTextEditor.Color.Background,AbstractTextEditor.Color.Foreground.SystemDefault,AbstractTextEditor.Color.SelectionForeground,AbstractTextEditor.Color.Foreground,AbstractTextEditor.Color.FindScope,asOccurencesIndicationColor,breakpointIndicationColor,currentIPColor,deletionIndicationColor,hyperlinkColor,hyperlinkColor.SystemDefault,infoIndicationColor,linked.slave.color,matchingTagIndicationColor,overrideIndicatorColor,printMarginColor,searchResultHighlighting,searchResultIndication,searchResultIndicationColor,searchResultTextStyle,secondaryIPColor,spellingIndicationColor,
+overrideIndicatorColor=78,120,117
+>>>>>>> 2d2efe340d4322cb86786edb71f3f28e9ecb6762
 overviewRuler_migration=migrated_3.1

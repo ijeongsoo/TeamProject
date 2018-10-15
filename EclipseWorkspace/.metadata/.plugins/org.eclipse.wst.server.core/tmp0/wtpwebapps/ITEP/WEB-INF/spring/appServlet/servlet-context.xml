@@ -30,7 +30,7 @@
 	<beans:bean id="multipartResolver"
 		  class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 		  
-		  	<!-- 스케쥴러 -->
+	<!-- 스케쥴러 -->
 	<beans:bean id="scheduller" class="kr.co.ibk.itep.scheduller.Scheduller" />
 	<task:scheduler id="itepScheduler" pool-size="10" />
  	<task:executor id="itepTaskExecutor" pool-size="10" />
