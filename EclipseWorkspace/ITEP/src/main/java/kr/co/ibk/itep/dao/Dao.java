@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
+import kr.co.ibk.itep.dto.EduJoinedEcd;
 import kr.co.ibk.itep.dto.Emp001m;
 import kr.co.ibk.itep.dto.EmpJoinedDep;
 
@@ -22,5 +23,9 @@ public interface Dao {
 	public void deleteAllBri();
 
 	public void insertAllBri(Map<String, Object> map);
+
+	public ArrayList<EduJoinedEcd> selectTop8Edu();
+
+	public ArrayList<EduJoinedEcd> selectDDayEdu();
 
 }

@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import kr.co.ibk.itep.dao.Dao;
 import kr.co.ibk.itep.dto.Bri001m;
+import kr.co.ibk.itep.dto.EduJoinedEcd;
 import kr.co.ibk.itep.dto.Emp001m;
 import kr.co.ibk.itep.dto.EmpJoinedDep;
 
@@ -179,6 +180,19 @@ public class ServiceImpl implements Service {
 			System.err.println(e);
 		}
 		
+	}
+
+	@Override
+	public ArrayList<EduJoinedEcd> getTop8Edu() {
+		// TODO Auto-generated method stub
+		ArrayList<EduJoinedEcd> list = dao.selectTop8Edu();
+		return list;
+	}
+
+	@Override
+	public ArrayList<EduJoinedEcd> getDDayEdu() {
+		ArrayList<EduJoinedEcd> list = dao.selectDDayEdu();
+		return list;
 	}
 
 }

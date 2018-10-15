@@ -8,6 +8,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import kr.co.ibk.itep.dto.EduJoinedEcd;
 import kr.co.ibk.itep.dto.Emp001m;
 import kr.co.ibk.itep.dto.EmpJoinedDep;
 
@@ -48,6 +49,19 @@ public class DaoImpl implements Dao {
 	public void insertAllBri(Map<String, Object> map) {
 		sst.insert("bri001m.insertAll", map);
 		
+	}
+
+	@Override
+	public ArrayList<EduJoinedEcd> selectTop8Edu() {
+		List<EduJoinedEcd> list = sst.selectList("edu001m.selectTop8Edu");
+		
+		return (ArrayList<EduJoinedEcd>)list;
+	}
+
+	@Override
+	public ArrayList<EduJoinedEcd> selectDDayEdu() {
+		List<EduJoinedEcd> list = sst.selectList("edu001m.selectDDayEdu");
+		return (ArrayList<EduJoinedEcd>)list;
 	}
 	
 

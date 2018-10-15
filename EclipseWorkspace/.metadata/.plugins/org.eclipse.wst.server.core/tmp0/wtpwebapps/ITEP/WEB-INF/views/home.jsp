@@ -1,4 +1,9 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html; charset=UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -42,13 +47,36 @@
     	.container {
  			 width: 1120px;
   			max-width: none !important;
-  			mim-width: 1120px !important;
-  			
+/*   			mim-width: 1120px !important;
+ */  			
+ 		}
+ 
+			.hidden { 
+			display: inline-block; 
+			width: 200px; 
+			white-space:nowrap;
+			 overflow: hidden;
+			  text-overflow: ellipsis; 
+			  
+			 }
+
+			
 		}
 		
 		
 	
     	</style>
+    	
+    	<script>
+    		// 관리자만 보이게    		
+			$(function() {
+				if(${login_info.auth_cd} !='04'){
+					$("#adminButton").attr('style', 'visiblity:show');
+				}
+			});
+
+    		
+    	</script>
     	
 	</head>
 <body id="page-top">
@@ -60,15 +88,16 @@
 
         <div class=" " id="">
           <ul class="navbar-nav ml-auto">
+          	<li class="nav-item mx-0 mx-sm-1">
+              <a id='adminButton' style="visibility: hidden;" class="hanna nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">관리자</a>
+            </li>
             <li class="nav-item mx-0 mx-sm-1">
               <a class="hanna nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">교육 정보</a>
             </li>
             <li class="nav-item mx-0 mx-sm-1">
               <a class="hanna nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">내 정보</a>
             </li>
-            <li class="nav-item mx-0 mx-sm-1">
-              <a class="hanna nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">관리자</a>
-            </li>
+            
           </ul>
         </div>
       </div>
@@ -108,77 +137,44 @@
 	        <div class="col-xl-12">
 	          <div class="">
 	            <div id="owl-works" class="">
-	            	
-	              <div >
-	              	<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
-	         	        <h4 class="hanna text-center mb-0" >1위</h4>
-	              		<div style="text-align: center;  "><img src="resources/main_page_resource/sub/img/works/1.jpg" class="photo3" alt="img"></div>
-	              		<h4 class="hanna text-center text-secondary mb-0" >Java</h4>
-	              		<h4 class="hanna text-center text-secondary mb-0">한국 생산성 본부</h4>
-	              	</a>
-	              </div>
-	              <div class="">
-	              	<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
-	         	        <h4 class="hanna text-center mb-0" >2위</h4>
-	              		<div style="text-align: center;  "><img src="resources/main_page_resource/sub/img/works/1.jpg" class="photo3" alt="img"></div>
-	              		<h4 class="hanna text-center text-secondary mb-0" >Java</h4>
-	              		<h4 class="hanna text-center text-secondary mb-0">한국 생산성 본부</h4>
-	              	</a>
-	              </div>
-	              <div class="">
-	              	<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
-	         	        <h4 class="hanna text-center mb-0" >3위</h4>
-	              		<div style="text-align: center;  "><img src="resources/main_page_resource/sub/img/works/1.jpg" class="photo3" alt="img"></div>
-	              		<h4 class="hanna text-center text-secondary mb-0" >Java</h4>
-	              		<h4 class="hanna text-center text-secondary mb-0">한국 생산성 본부</h4>
-	              	</a>
-	              </div>
-	              <div class="">
-	              	<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
-	         	        <h4 class="hanna text-center mb-0" >4위</h4>
-	              		<div style="text-align: center;  "><img src="resources/main_page_resource/sub/img/works/1.jpg" class="photo3" alt="img"></div>
-	              		<h4 class="hanna text-center text-secondary mb-0" >Java</h4>
-	              		<h4 class="hanna text-center text-secondary mb-0">한국 생산성 본부</h4>
-	              	</a>
-	              </div>
-	              <div class="">
-	              	<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
-	         	        <h4 class="hanna text-center mb-0" >5위</h4>
-	              		<div style="text-align: center;  "><img src="resources/main_page_resource/sub/img/works/1.jpg" class="photo3" alt="img"></div>
-	              		<h4 class="hanna text-center text-secondary mb-0" >Java</h4>
-	              		<h4 class="hanna text-center text-secondary mb-0">한국 생산성 본부</h4>
-	              	</a>
-	              </div>
-	              <div class="">
-	              	<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
-	         	        <h4 class="hanna text-center mb-0" >6위</h4>
-	              		<div style="text-align: center;  "><img src="resources/main_page_resource/sub/img/works/1.jpg" class="photo3" alt="img"></div>
-	              		<h4 class="hanna text-center text-secondary mb-0" >Java</h4>
-	              		<h4 class="hanna text-center text-secondary mb-0">한국 생산성 본부</h4>
-	              	</a>
-	              </div>
-	             <div class="">
-	              	<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
-	         	        <h4 class="hanna text-center mb-0" >7위</h4>
-	              		<div style="text-align: center;  "><img src="resources/main_page_resource/sub/img/works/1.jpg" class="photo3" alt="img"></div>
-	              		<h4 class="hanna text-center text-secondary mb-0" >Java</h4>
-	              		<h4 class="hanna text-center text-secondary mb-0">한국 생산성 본부</h4>
-	              	</a>
-	              </div>
-	              
-	              <div class="">
-	              	<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
-	         	        <h4 class="hanna text-center mb-0" >8위</h4>
-	              		<div style="text-align: center;  "><img src="resources/main_page_resource/sub/img/works/1.jpg" class="photo3" alt="img"></div>
-	              		<h4 class="hanna text-center text-secondary mb-0" >Java</h4>
-	              		<h4 class="hanna text-center text-secondary mb-0">한국 생산성 본부</h4>
-	              	</a>
-	              </div>
-	             
+	            	<c:forEach var="d" items="${top8List}" varStatus="status">
+	              		<div class="">
+	              			<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
+	         	       			<h4 class="hanna text-center mb-0" >${d.rownum }위</h4>
+	              				<div style="text-align: center;  "><img src="<%=application.getContextPath()%>/file?svr_img_file_nm=${d.svr_img_file_nm}&mfiletype=${d.img_file_type}" class="photo3" alt="img"></div>
+	              				<div style="text-align: center;  "><h4 class="hanna  text-secondary hidden text-center" style="padding-bottom: 0px" >${d.course_nm} </h4></div>
+	              				<div style="text-align: center;  "><p class="hanna  text-secondary hidden text-center" style="padding: 0px" >${d.org_nm}</p></div>
+	              				<div style="text-align: center;  "><p class="hanna  text-secondary hidden text-center" style="padding-top: 0px" >${d.edu_st_dt} ~ ${d.edu_ed_dt }</p></div>
+	              			</a>
+	              		</div>
+	              	</c:forEach>
+	                           
+	            </div>
+	          </div>
+	        </div>
+	      </div>  
+	      
+	     <h3 class="hanna text-uppercase text-secondary mb-0">신청 마감 임박!!</h3>
+	      <div class="row">
+	        <div class="col-xl-12">
+	          <div class="">
+	            <div id="owl-works" class="">
+	            	<c:forEach var="d" items="${ddayList }" varStatus="status">
+	              		<div class="">
+	              			<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
+	         	       			<h4 class="hanna text-center mb-0" >D-${d.dday }</h4>
+	              				<div style="text-align: center;  "><img src="<%=application.getContextPath()%>/file?svr_img_file_nm=${d.svr_img_file_nm}&mfiletype=${d.img_file_type}" class="photo3" alt="img"></div>
+	              				<div style="text-align: center;  "><h4 class="hanna  text-secondary hidden text-center" style="padding-bottom: 0px" >${d.course_nm} </h4></div>
+	              				<div style="text-align: center;  "><p class="hanna  text-secondary hidden text-center" style="padding: 0px" >${d.org_nm}</p></div>
+	              				<div style="text-align: center;  "><p class="hanna  text-secondary hidden text-center" style="padding-top: 0px" >${d.edu_st_dt} ~ ${d.edu_ed_dt }</p></div>
+	              			</a>
+	              		</div>
+	              	</c:forEach>            
 	            </div>
 	          </div>
 	        </div>
 	      </div>
+	      
       </div>
     </section>
     
@@ -207,6 +203,8 @@
             Download Now!
           </a>
         </div>
+        
+        
       </div>
     </section>
 
