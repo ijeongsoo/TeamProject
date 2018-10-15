@@ -1,4 +1,3 @@
-GitRepositoriesView.GitDirectories=/Users/ijeongsu/Desktop/IBK/GitRepository/TeamProject/.git\:/Users/ijeongsu/Desktop/IotCourse/GitRepository/TestRepository/.git\:
-GitRepositoriesView.GitDirectories.relative=/Users/ijeongsu/Desktop/IBK/GitRepository/TeamProject/.git\:/Users/ijeongsu/Desktop/IotCourse/GitRepository/TestRepository/.git\:
-core_autoIgnoreDerivedResources=false
+GitRepositoriesView.GitDirectories=C\:\\workspace_ibk\\TeamProject\\.git;
+GitRepositoriesView.GitDirectories.relative=C\:\\workspace_ibk\\TeamProject\\.git;
 eclipse.preferences.version=1
