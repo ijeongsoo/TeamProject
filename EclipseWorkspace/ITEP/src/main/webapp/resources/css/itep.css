@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@font-face{
+font-family:hanna;
+src:url('BM-HANNA.eot');
+src:local(※), 
+	url('BM-HANNA.woff') format('woff');
+}
+
+
+.hanna{
+	font-family: hanna;
+	font-weight: normal;
+	margin: 0;
+	padding: 10px;
+}
+
+.photo3 {
+    width: 200px; height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.container {
+ 			 width: 1120px;
+  			max-width: none !important;
+/*   			mim-width: 1120px !important;
+ */  			
+ 		}
+ 
+			.hidden { 
+			display: inline-block; 
+			width: 200px; 
+			white-space:nowrap;
+			 overflow: hidden;
+			  text-overflow: ellipsis; 
+			  
+			 }

@@ -717,11 +717,6 @@ hr.bold {
 --- Works
 ============================ */
 
-.photo3 {
-    width: 200px; height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-}
 #owl-works {
 
 }

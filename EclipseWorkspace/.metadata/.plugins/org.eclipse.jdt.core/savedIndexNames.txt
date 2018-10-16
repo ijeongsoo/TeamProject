@@ -32,7 +32,6 @@ INDEX VERSION 1.130+/Users/ijeongsu/Desktop/IBK/GitRepository/TeamProject/Eclips
 3975215079.index
 2005726106.index
 1713768776.index
-2545379319.index
 22033807.index
 3832410885.index
 3199462873.index

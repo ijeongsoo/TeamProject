@@ -44,7 +44,7 @@ public class SessionedController {
 	
 	
 	@RequestMapping("/home")
-	public String home(String ssoid, Model model) {
+	public String home( Model model) {
 		ArrayList<EduJoinedEcd> top8List = new ArrayList<>();
 		ArrayList<EduJoinedEcd> top8List1 = new ArrayList<>();
 		ArrayList<EduJoinedEcd> top8List2 = new ArrayList<>();
