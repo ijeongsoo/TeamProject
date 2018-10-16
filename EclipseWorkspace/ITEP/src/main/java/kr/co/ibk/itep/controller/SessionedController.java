@@ -125,5 +125,15 @@ public class SessionedController {
 			return "error";
 		}
 	}
+
+	@RequestMapping("/eduUploadExcel")
+	public String eduUploadExcel(Model model) {
+		return "eduUploadExcel";
+	} 
+	
+	@RequestMapping("/dashboard")
+	public String dashboard(Model model) {
+		return "dashboard";
+	} 
 	
 }
