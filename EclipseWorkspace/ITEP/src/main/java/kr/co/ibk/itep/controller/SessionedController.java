@@ -1,4 +1,4 @@
-package kr.co.ibk.itep.controller;
+﻿package kr.co.ibk.itep.controller;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -102,6 +102,12 @@ public class SessionedController {
 		os.close();
 
 	}
+
+	@RequestMapping("/admin")
+	public String admin(String ssoid, Model model) {
+		model.addAttribute("ssoid", ssoid);
+		return "admin";
+	} 
 
 	
 }
