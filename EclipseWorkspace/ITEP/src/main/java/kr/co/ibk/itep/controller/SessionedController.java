@@ -46,11 +46,24 @@ public class SessionedController {
 	@RequestMapping("/home")
 	public String home(String ssoid, Model model) {
 		ArrayList<EduJoinedEcd> top8List = new ArrayList<>();
+		ArrayList<EduJoinedEcd> top8List1 = new ArrayList<>();
+		ArrayList<EduJoinedEcd> top8List2 = new ArrayList<>();
 		ArrayList<EduJoinedEcd> ddayList = new ArrayList<>();
 		top8List = service.getTop8Edu();
+		
+		for(int i=0; i<8; i++){
+			if( i/4 < 1){
+				top8List1.add(top8List.get(i));
+			}else{
+				top8List2.add(top8List.get(i));
+			}
+		}
+		
 		ddayList = service.getDDayEdu();
 		
-		model.addAttribute("top8List", top8List);
+		model.addAttribute("top8List1", top8List1);
+		model.addAttribute("top8List2", top8List2);
+
 		model.addAttribute("ddayList", ddayList);
 		
 

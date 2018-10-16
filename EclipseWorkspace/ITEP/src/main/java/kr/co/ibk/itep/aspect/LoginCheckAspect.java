@@ -25,6 +25,8 @@ public class LoginCheckAspect {
 		@Around("nonSession()")
 		public Object nonSessionCheckAdvice(ProceedingJoinPoint joinPoint) throws Throwable{
 			//before code
+
+			
 			RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
 			EmpJoinedDep empJoinedDep = (EmpJoinedDep)requestAttributes.getAttribute("login_info", RequestAttributes.SCOPE_SESSION);
 			if(empJoinedDep!=null){

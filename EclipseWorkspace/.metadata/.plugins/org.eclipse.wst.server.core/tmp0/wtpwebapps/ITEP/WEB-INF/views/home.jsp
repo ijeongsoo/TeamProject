@@ -59,6 +59,33 @@
 			  text-overflow: ellipsis; 
 			  
 			 }
+			 
+			 .carousel {
+	margin-bottom: 0;
+	padding: 0 40px 30px 40px;
+}
+
+.carousel-control {
+	left: -12px;
+}
+.carousel-control.right {
+	right: -12px;
+}
+
+.carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: 0px;
+	margin-right: -19px;
+}
+
+.carousel-indicators li {
+	background: #c0c0c0;
+}
+
+.carousel-indicators .active {
+background: #333333;
+}
 
 			
 		}
@@ -133,29 +160,52 @@
         
         <h3 class="hanna text-uppercase text-secondary mb-0">인기 교육 Top 8</h3>
         
-	      <div class="row">
-	        <div class="col-xl-12">
-	          <div class="">
-	            <div id="owl-works" class="">
-	            	<c:forEach var="d" items="${top8List}" varStatus="status">
-	              		<div class="">
-	              			<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
-	         	       			<h4 class="hanna text-center mb-0" >${d.rownum }위</h4>
+         <div class="row flyIn">
+         	<div class="col-lg-12">
+          		<div class="testimonialslide  ">
+            		<ul class="slides">
+             
+             			<li style="text-align: center;" >
+             				<c:forEach var="d" items="${top8List1}" varStatus="status">
+	               				<div style="display : inline-table ; width: 20% ; padding: 30px">
+		              				<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
+	         	       			<p style="font-size: 20pt" class="hanna text-center mb-0" >${d.rownum }위</p>
 	              				<div style="text-align: center;  "><img src="<%=application.getContextPath()%>/file?svr_img_file_nm=${d.svr_img_file_nm}&mfiletype=${d.img_file_type}" class="photo3" alt="img"></div>
 	              				<div style="text-align: center;  "><h4 class="hanna  text-secondary hidden text-center" style="padding-bottom: 0px" >${d.course_nm} </h4></div>
 	              				<div style="text-align: center;  "><p class="hanna  text-secondary hidden text-center" style="padding: 0px" >${d.org_nm}</p></div>
 	              				<div style="text-align: center;  "><p class="hanna  text-secondary hidden text-center" style="padding-top: 0px" >${d.edu_st_dt} ~ ${d.edu_ed_dt }</p></div>
 	              			</a>
-	              		</div>
-	              	</c:forEach>
-	                           
-	            </div>
-	          </div>
-	        </div>
-	      </div>  
+		              			</div>
+		              		</c:forEach>
+	              			
+              			</li>
+                        <li style="text-align: center;">
+                			<c:forEach var="d" items="${top8List2}" varStatus="status">
+	               				<div style="display : inline-table ; width: 23% ; padding: 20px">
+		              				<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
+	         	       			<p style="font-size: 20pt" class="hanna text-center mb-0" >${d.rownum }위</p>
+	              				<div style="text-align: center;  "><img src="<%=application.getContextPath()%>/file?svr_img_file_nm=${d.svr_img_file_nm}&mfiletype=${d.img_file_type}" class="photo3" alt="img"></div>
+	              				<div style="text-align: center;  "><h4 class="hanna  text-secondary hidden text-center" style="padding-bottom: 0px" >${d.course_nm} </h4></div>
+	              				<div style="text-align: center;  "><p class="hanna  text-secondary hidden text-center" style="padding: 0px" >${d.org_nm}</p></div>
+	              				<div style="text-align: center;  "><p class="hanna  text-secondary hidden text-center" style="padding-top: 0px" >${d.edu_st_dt} ~ ${d.edu_ed_dt }</p></div>
+	              			</a>
+		              			</div>
+		              		</c:forEach>
+              			</li>
+            		</ul>
+            		
+            		
+          </div>
+        </div>
+      </div>
+      
+        
+
 	      
 	     <h3 class="hanna text-uppercase text-secondary mb-0">신청 마감 임박!!</h3>
-	      <div class="row">
+	     
+	    
+ 	      <div class="row flyIn">
 	        <div class="col-xl-12">
 	          <div class="">
 	            <div id="owl-works" class="">
@@ -173,9 +223,13 @@
 	            </div>
 	          </div>
 	        </div>
-	      </div>
+	      </div> 
 	      
-      </div>
+	      
+  
+ 
+ 
+	      
     </section>
     
 
