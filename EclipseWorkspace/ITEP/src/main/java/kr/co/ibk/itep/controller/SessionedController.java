@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+
 import java.util.HashMap;
+
 import java.util.List;
 
 import javax.servlet.ServletContext;
@@ -27,6 +29,7 @@ import org.springframework.web.servlet.ModelAndView;
 import kr.co.ibk.itep.dto.Ath001m;
 import kr.co.ibk.itep.dto.EduJoinedEcd;
 import kr.co.ibk.itep.service.Service;
+import kr.co.ibk.itep.dto.JoinForEdulist;
 
 
 
@@ -43,13 +46,26 @@ public class SessionedController {
 	
 	
 	@RequestMapping("/home")
-	public String home(String ssoid, Model model) {
+	public String home( Model model) {
 		ArrayList<EduJoinedEcd> top8List = new ArrayList<>();
+		ArrayList<EduJoinedEcd> top8List1 = new ArrayList<>();
+		ArrayList<EduJoinedEcd> top8List2 = new ArrayList<>();
 		ArrayList<EduJoinedEcd> ddayList = new ArrayList<>();
 		top8List = service.getTop8Edu();
+		
+		for(int i=0; i<8; i++){
+			if( i/4 < 1){
+				top8List1.add(top8List.get(i));
+			}else{
+				top8List2.add(top8List.get(i));
+			}
+		}
+		
 		ddayList = service.getDDayEdu();
 		
-		model.addAttribute("top8List", top8List);
+		model.addAttribute("top8List1", top8List1);
+		model.addAttribute("top8List2", top8List2);
+
 		model.addAttribute("ddayList", ddayList);
 		
 
@@ -110,5 +126,29 @@ public class SessionedController {
 		return mv;
 	} 
 
+	@RequestMapping("/EduList")
+	public String EduList(String ssoid, Model model) {
+		try{
+			
+			List<JoinForEdulist> joinForEdulist = service.selectEdulist();
+				model.addAttribute("edu_list", joinForEdulist);
+				model.addAttribute("ssoid", ssoid);
+				return "EduList";
+		}catch(Exception e){
+			logger.error(e.getStackTrace().toString());
+			model.addAttribute("result", 1);
+			return "error";
+		}
+	}
+
+	@RequestMapping("/eduUploadExcel")
+	public String eduUploadExcel(Model model) {
+		return "eduUploadExcel";
+	} 
+	
+	@RequestMapping("/dashboard")
+	public String dashboard(Model model) {
+		return "dashboard";
+	} 
 	
 }

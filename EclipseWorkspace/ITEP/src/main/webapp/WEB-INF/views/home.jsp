@@ -14,13 +14,10 @@
 		
 	    <title >IT그룹 교육 포탈</title>
 	    
- 		<script src="<%=application.getContextPath()%>/resources/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
-		<script src="<%=application.getContextPath()%>/resources/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+  		<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.js"></script>
 	
-		
 		<link href="<%=application.getContextPath()%>/resources/main_page_resource/css/style.css" rel="stylesheet">
-  		<link href="<%=application.getContextPath()%>/resources/main_page_resource/color/default.css" rel="stylesheet">
- 		
+
 		    <!-- Bootstrap core CSS -->
      	<link href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		
@@ -31,49 +28,24 @@
 	    <link href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 	
 	    <!-- Custom styles for this template -->
-	    <link href="<%=application.getContextPath()%>/resources/main_page_resource/css/freelancer.min.css" rel="stylesheet">
+	    <link href="<%=application.getContextPath()%>/resources/main_page_resource/css/freelancer.css" rel="stylesheet">
     
-    	<link href="<%=application.getContextPath()%>/resources/css/hannafont.css" rel="stylesheet" type="text/css">
-    
-  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/nivo-lightbox.css" rel="stylesheet" />
-  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
-  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.carousel.css" rel="stylesheet" media="screen" />
-  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.theme.css" rel="stylesheet" media="screen" />
-  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/style.css" rel="stylesheet">
-  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/color/default.css" rel="stylesheet">
-    	
-    	
-    	<style type="text/css">
-    	.container {
- 			 width: 1120px;
-  			max-width: none !important;
-/*   			mim-width: 1120px !important;
- */  			
- 		}
- 
-			.hidden { 
-			display: inline-block; 
-			width: 200px; 
-			white-space:nowrap;
-			 overflow: hidden;
-			  text-overflow: ellipsis; 
-			  
-			 }
 
-			
-		}
-		
-		
-	
-    	</style>
+		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.carousel.css" rel="stylesheet" media="screen" />
+		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.theme.css" rel="stylesheet" media="screen" />
+		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/style.css" rel="stylesheet">
+		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/color/default.css" rel="stylesheet">
+		 <link href="<%=application.getContextPath()%>/resources/css/itep.css" rel="stylesheet" type="text/css">
+		    	
+
     	
     	<script>
     		// 관리자만 보이게    		
-			$(function() {
+			$( function() {
 				if(${login_info.auth_cd} !='04'){
 					$("#adminButton").attr('style', 'visiblity:show');
 				}
-			});
+			} );
 
     		
     	</script>
@@ -95,7 +67,7 @@
               <a class="hanna nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">교육 정보</a>
             </li>
             <li class="nav-item mx-0 mx-sm-1">
-              <a class="hanna nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">내 정보</a>
+              <a class="hanna nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">${login_info.emm}님의 정보</a>
             </li>
             
           </ul>
@@ -126,36 +98,59 @@
     </header>
 
     <!-- Portfolio Grid Section -->
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio" id="portfolio" style="background-color:#fdfde9">
       <div class="container">
         <h2 class="hanna text-center text-uppercase text-secondary mb-0">교육 정보</h2>
-        <hr class="star-dark mb-5">
+        <hr class="star-edu mb-5">
         
         <h3 class="hanna text-uppercase text-secondary mb-0">인기 교육 Top 8</h3>
         
-	      <div class="row">
-	        <div class="col-xl-12">
-	          <div class="">
-	            <div id="owl-works" class="">
-	            	<c:forEach var="d" items="${top8List}" varStatus="status">
-	              		<div class="">
-	              			<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
-	         	       			<h4 class="hanna text-center mb-0" >${d.rownum }위</h4>
+         <div class="row flyIn">
+         	<div class="col-lg-12">
+          		<div class="testimonialslide  ">
+            		<ul class="slides">
+             
+             			<li style="text-align: center;" >
+             				<c:forEach var="d" items="${top8List1}" varStatus="status">
+	               				<div style="display : inline-table ; width: 20% ; padding: 30px">
+		              				<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
+	         	       			<p style="font-size: 20pt" class="hanna text-center mb-0" >${d.rownum }위</p>
 	              				<div style="text-align: center;  "><img src="<%=application.getContextPath()%>/file?svr_img_file_nm=${d.svr_img_file_nm}&mfiletype=${d.img_file_type}" class="photo3" alt="img"></div>
 	              				<div style="text-align: center;  "><h4 class="hanna  text-secondary hidden text-center" style="padding-bottom: 0px" >${d.course_nm} </h4></div>
 	              				<div style="text-align: center;  "><p class="hanna  text-secondary hidden text-center" style="padding: 0px" >${d.org_nm}</p></div>
 	              				<div style="text-align: center;  "><p class="hanna  text-secondary hidden text-center" style="padding-top: 0px" >${d.edu_st_dt} ~ ${d.edu_ed_dt }</p></div>
 	              			</a>
-	              		</div>
-	              	</c:forEach>
-	                           
-	            </div>
-	          </div>
-	        </div>
-	      </div>  
+		              			</div>
+		              		</c:forEach>
+	              			
+              			</li>
+                        <li style="text-align: center;">
+                			<c:forEach var="d" items="${top8List2}" varStatus="status">
+	               				<div style="display : inline-table ; width: 23% ; padding: 20px">
+		              				<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
+	         	       			<p style="font-size: 20pt" class="hanna text-center mb-0" >${d.rownum }위</p>
+	              				<div style="text-align: center;  "><img src="<%=application.getContextPath()%>/file?svr_img_file_nm=${d.svr_img_file_nm}&mfiletype=${d.img_file_type}" class="photo3" alt="img"></div>
+	              				<div style="text-align: center;  "><h4 class="hanna  text-secondary hidden text-center" style="padding-bottom: 0px" >${d.course_nm} </h4></div>
+	              				<div style="text-align: center;  "><p class="hanna  text-secondary hidden text-center" style="padding: 0px" >${d.org_nm}</p></div>
+	              				<div style="text-align: center;  "><p class="hanna  text-secondary hidden text-center" style="padding-top: 0px" >${d.edu_st_dt} ~ ${d.edu_ed_dt }</p></div>
+	              			</a>
+		              			</div>
+		              		</c:forEach>
+              			</li>
+            		</ul>
+            		
+            		
+          </div>
+        </div>
+      </div>
+      
+        
+
 	      
 	     <h3 class="hanna text-uppercase text-secondary mb-0">신청 마감 임박!!</h3>
-	      <div class="row">
+	     
+	    
+ 	      <div class="row flyIn">
 	        <div class="col-xl-12">
 	          <div class="">
 	            <div id="owl-works" class="">
@@ -173,9 +168,13 @@
 	            </div>
 	          </div>
 	        </div>
-	      </div>
+	      </div> 
 	      
-      </div>
+	      
+  
+ 
+ 
+	      
     </section>
     
 
@@ -471,12 +470,11 @@
     
     <script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.js"></script>
 	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.scrollTo.js"></script>
-	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.nav.js"></script>
-	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.localScroll.js"></script>
-	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/bootstrap.js"></script>
-	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.prettyPhoto.js"></script>
-	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/isotope.js"></script>
-	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.flexslider.js"></script>
+ 	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.nav.js"></script>
+ 	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.localScroll.js"></script>
+   	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.prettyPhoto.js"></script>
+<%--  	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/isotope.js"></script>
+ --%>	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.flexslider.js"></script>
 	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/inview.js"></script>
 	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/animate.js"></script>
 	<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/custom.js"></script>
@@ -486,8 +484,7 @@
   <script src="<%=application.getContextPath()%>/resources/main_page_resource/sub/js/slippry.min.js"></script>
   <script src="<%=application.getContextPath()%>/resources/main_page_resource/sub/js/wow.min.js"></script>
   <script src="<%=application.getContextPath()%>/resources/main_page_resource/sub/js/owl.carousel.min.js"></script>
-  <script src="<%=application.getContextPath()%>/resources/main_page_resource/sub/js/nivo-lightbox.min.js"></script>
-  <script src="<%=application.getContextPath()%>/resources/main_page_resource/sub/js/custom.js"></script>
+ <script src="<%=application.getContextPath()%>/resources/main_page_resource/sub/js/custom.js"></script>
     
     
 

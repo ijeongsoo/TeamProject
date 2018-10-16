@@ -26,7 +26,7 @@
 							location.href = "error"
 
 						}else{
-							location.href = "home?ssoid=${login_info.id}";
+							location.href = "home";
 						}
 
 					}

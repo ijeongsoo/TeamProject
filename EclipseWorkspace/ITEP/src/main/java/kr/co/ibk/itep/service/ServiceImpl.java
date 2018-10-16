@@ -1,4 +1,4 @@
-package kr.co.ibk.itep.service;
+﻿package kr.co.ibk.itep.service;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -25,6 +25,7 @@ import kr.co.ibk.itep.dto.Bri001m;
 import kr.co.ibk.itep.dto.EduJoinedEcd;
 import kr.co.ibk.itep.dto.Emp001m;
 import kr.co.ibk.itep.dto.EmpJoinedDep;
+import kr.co.ibk.itep.dto.JoinForEdulist;
 
 @Component
 public class ServiceImpl implements Service {
@@ -41,6 +42,14 @@ public class ServiceImpl implements Service {
 		return empJoinedDep;
 	}
 
+	@Override
+	public List<JoinForEdulist> selectEdulist() {
+		// TODO Auto-generated method stub
+		List<JoinForEdulist> joinForEdulist = dao.selectAllEdulist();
+
+		return joinForEdulist;
+	}
+	
 	@Override
 	@Transactional
 	public void empFileUploader(String originPath, String newPath) {
