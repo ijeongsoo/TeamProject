@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
@@ -28,6 +29,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import kr.co.ibk.itep.dto.EduJoinedEcd;
 import kr.co.ibk.itep.dto.EmpJoinedDep;
 import kr.co.ibk.itep.service.Service;
+import kr.co.ibk.itep.dto.JoinForEdulist;
 
 
 
@@ -109,5 +111,19 @@ public class SessionedController {
 		return "admin";
 	} 
 
+	@RequestMapping("/EduList")
+	public String EduList(String ssoid, Model model) {
+		try{
+			
+			List<JoinForEdulist> joinForEdulist = service.selectEdulist();
+				model.addAttribute("edu_list", joinForEdulist);
+				model.addAttribute("ssoid", ssoid);
+				return "EduList";
+		}catch(Exception e){
+			logger.error(e.getStackTrace().toString());
+			model.addAttribute("result", 1);
+			return "error";
+		}
+	}
 	
 }

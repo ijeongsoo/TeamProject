@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import kr.co.ibk.itep.dto.EduJoinedEcd;
 import kr.co.ibk.itep.dto.Emp001m;
 import kr.co.ibk.itep.dto.EmpJoinedDep;
+import kr.co.ibk.itep.dto.JoinForEdulist;
 
 
 @Component
@@ -26,6 +27,14 @@ public class DaoImpl implements Dao {
 		return empJoinedDep;
 	}
 
+	@Override
+	public List<JoinForEdulist> selectAllEdulist() {
+		// TODO Auto-generated method stub
+		
+		List<JoinForEdulist> joinForEdulist=sst.selectList("edu001m.selectAll");
+		return joinForEdulist;
+	}
+	
 	@Override
 	public void deleteAllEmp() {
 		sst.delete("emp001m.deleteAll");
