@@ -32,3 +32,9 @@ ompiled source #
 ehthumbs.db
 Icon?
 Thumbs.db
+
+.metadata/
+.recommenders/
+Servers/
+RemoteSystemTempFiles/
+target/
