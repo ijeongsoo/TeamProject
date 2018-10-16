@@ -2,9 +2,11 @@ package kr.co.ibk.itep.service;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import kr.co.ibk.itep.dto.Ath001m;
 import kr.co.ibk.itep.dto.EduJoinedEcd;
 import kr.co.ibk.itep.dto.EmpJoinedDep;
 
@@ -21,5 +23,7 @@ public interface Service {
 	public ArrayList<EduJoinedEcd> getTop8Edu();
 
 	public ArrayList<EduJoinedEcd> getDDayEdu();
+
+	public List<Ath001m> selectAuthorityList(String searchOption, String keyword);
 
 }

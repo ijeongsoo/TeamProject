@@ -349,7 +349,7 @@
                       </a>
           </li>
           <li>
-            <a class="" <%--href="<%=application.getContextPath()%>/resources/admin_page_resource/widgets.html"--%>>
+            <a class="" href="/ITEP/authority">
                           <i class="icon_genius"></i>
                           <span>권한관리</span>
                       </a>
