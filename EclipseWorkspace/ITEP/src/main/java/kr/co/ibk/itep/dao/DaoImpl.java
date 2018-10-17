@@ -82,6 +82,12 @@ public class DaoImpl implements Dao {
 		
 		return list;
 	}
+
+	@Override
+	public ArrayList<EduJoinedEcd> selectCategoryEdu() {
+		List<EduJoinedEcd> list = sst.selectList("edu001m.selectCategoryEdu");
+		return (ArrayList<EduJoinedEcd>) list;
+	}
 	
 
 }

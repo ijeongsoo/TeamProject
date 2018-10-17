@@ -51,9 +51,12 @@ public class SessionedController {
 		ArrayList<EduJoinedEcd> top8List1 = new ArrayList<>();
 		ArrayList<EduJoinedEcd> top8List2 = new ArrayList<>();
 		ArrayList<EduJoinedEcd> ddayList = new ArrayList<>();
-		top8List = service.getTop8Edu();
+		ArrayList<EduJoinedEcd> categoryList = new ArrayList<>();
+
 		
-		for(int i=0; i<8; i++){
+		top8List = service.getTop8Edu();
+		logger.info( " ####################"+ top8List.size() );
+		for(int i=0; i<top8List.size(); i++){
 			if( i/4 < 1){
 				top8List1.add(top8List.get(i));
 			}else{
@@ -62,12 +65,13 @@ public class SessionedController {
 		}
 		
 		ddayList = service.getDDayEdu();
-		
+		categoryList = service.getCategoryEdu();
+
 		model.addAttribute("top8List1", top8List1);
 		model.addAttribute("top8List2", top8List2);
 
 		model.addAttribute("ddayList", ddayList);
-		
+		model.addAttribute("categoryList", categoryList);
 
 		return "home";
 	} 

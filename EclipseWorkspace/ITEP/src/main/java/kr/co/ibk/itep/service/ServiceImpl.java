@@ -204,6 +204,14 @@ public class ServiceImpl implements Service {
 		ArrayList<EduJoinedEcd> list = dao.selectDDayEdu();
 		return list;
 	}
+	
+
+	@Override
+	public ArrayList<EduJoinedEcd> getCategoryEdu() {
+		ArrayList<EduJoinedEcd> list = dao.selectCategoryEdu();
+		return list;
+	}
+
 
 	@Override
 	public List<Ath001m> selectAuthorityList(String searchOption, String keyword) {

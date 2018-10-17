@@ -6,7 +6,28 @@ public class EduJoinedEcd {
 
 	private String course_cd;
 	private String org_nm;
+	private String high_cls_cd;
+	private String mid_cls_cd;
+	private String low_cls_cd;
 	private String course_nm;
+	public String getHigh_cls_cd() {
+		return high_cls_cd;
+	}
+	public void setHigh_cls_cd(String high_cls_cd) {
+		this.high_cls_cd = high_cls_cd;
+	}
+	public String getMid_cls_cd() {
+		return mid_cls_cd;
+	}
+	public void setMid_cls_cd(String mid_cls_cd) {
+		this.mid_cls_cd = mid_cls_cd;
+	}
+	public String getLow_cls_cd() {
+		return low_cls_cd;
+	}
+	public void setLow_cls_cd(String low_cls_cd) {
+		this.low_cls_cd = low_cls_cd;
+	}
 	private String edu_st_dt;
 	private String edu_ed_dt;
 	private String svr_img_file_nm ;

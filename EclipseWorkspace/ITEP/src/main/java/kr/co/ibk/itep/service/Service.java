@@ -28,8 +28,11 @@ public interface Service {
 
 	public ArrayList<EduJoinedEcd> getDDayEdu();
 
-
+	public ArrayList<EduJoinedEcd> getCategoryEdu();
+	
 	public List<Ath001m> selectAuthorityList(String searchOption, String keyword);
+
+
 
 }
 
