@@ -1,5 +1,6 @@
 ﻿package kr.co.ibk.itep.controller;
 
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -29,12 +30,12 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.co.ibk.itep.dto.Ath001m;
+import kr.co.ibk.itep.dto.EduApproval;
 import kr.co.ibk.itep.dto.EduJoinedEcd;
 import kr.co.ibk.itep.dto.EmpJoinedDep;
+import kr.co.ibk.itep.service.AdminApprovalService;
 import kr.co.ibk.itep.service.Service;
-import kr.co.ibk.itep.dto.JoinForEdulist;
-
- 
+import kr.co.ibk.itep.dto.JoinForEdulist; 
 
 @Controller
 @SessionAttributes("login_info")
@@ -46,6 +47,9 @@ public class SessionedController {
 	
 	@Autowired
 	private ServletContext servletContext;
+	
+	@Autowired
+	private AdminApprovalService adminService;
 	
 	
 	@RequestMapping("/home")
@@ -145,7 +149,6 @@ public class SessionedController {
 	} 
 	
 
-
 	@RequestMapping("/EduList")
 	public String EduList(String ssoid, Model model) {
 		try{
@@ -161,20 +164,39 @@ public class SessionedController {
 		}
 	}
 	
+	//결재 페이지
 	@RequestMapping("/approval")
 	public String adminApproval( Model model) {
 		
+		//직번
 		RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
 		EmpJoinedDep empJoinedDep = (EmpJoinedDep) requestAttributes.getAttribute("login_info",
 				RequestAttributes.SCOPE_SESSION);
 		
 		String ssoid = empJoinedDep.getEmn();
+
+		//접속한 사용자의 권한 획득
+		String auth = empJoinedDep.getAuth_cd();
 		
+
 		try {
-			//List<EduApproval> adminApprovalList = adminService.selectAllApprovalList();
-			//model.addAttribute("adminApproval_List", adminApprovalList);
-			model.addAttribute("ssoid", ssoid);
-			return "approval";
+			//관리자 또는 서무만 접속 가능
+			if(!auth.equals("04")) {
+				List<EduApproval> adminApprovalList = adminService.selectDepApprovalList(ssoid);
+				model.addAttribute("adminApproval_List", adminApprovalList);
+				if(auth.equals("01")){
+					
+				}else if(auth.equals("02")){
+					
+				}else if(auth.equals("03")){
+					
+				}
+				
+				return "approval";
+			}
+
+			//model.addAttribute("ssoid", ssoid);
+			return "error";
 		}catch(Exception e){
 			logger.error(e.getStackTrace().toString());
 			model.addAttribute("result", 1);
@@ -182,5 +204,47 @@ public class SessionedController {
 		}
 
 	} 
+	
+	
+	//결재 페이지
+	@RequestMapping("/updateApproval")
+	public String permissionApproval( Model model) {
+		
+		//직번
+		RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
+		EmpJoinedDep empJoinedDep = (EmpJoinedDep) requestAttributes.getAttribute("login_info",
+				RequestAttributes.SCOPE_SESSION);
+		
+		String ssoid = empJoinedDep.getEmn();
+
+		//접속한 사용자의 권한 획득
+		String auth = empJoinedDep.getAuth_cd();
+		
+
+		try {
+			//관리자 또는 서무만 접속 가능
+			if(!auth.equals("04")) {
+				List<EduApproval> adminApprovalList = adminService.selectDepApprovalList(ssoid);
+				model.addAttribute("adminApproval_List", adminApprovalList);
+				if(auth.equals("01")){
+					
+				}else if(auth.equals("02")){
+					
+				}else if(auth.equals("03")){
+					
+				}
+				
+				return "approval";
+			}
+
+			//model.addAttribute("ssoid", ssoid);
+			return "error";
+		}catch(Exception e){
+			logger.error(e.getStackTrace().toString());
+			model.addAttribute("result", 1);
+			return "error";
+		}
+
+	} 	
 	
 }

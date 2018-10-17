@@ -124,7 +124,7 @@
 							<li><a class=""<%-- href="<%=application.getContextPath()%>/resources/admin_page_resource/form_validation.html" --%>>교육등록</a></li>
 							<li><a class=""<%-- href="<%=application.getContextPath()%>/resources/admin_page_resource/form_validation.html" --%>>교육수정</a></li>
 						</ul></li>
-					<li><a class=""<%-- href="<%=application.getContextPath()%>/resources/admin_page_resource/widgets.html"--%>>
+					<li><a class="" href="approval">
 							<i class="icon_desktop"></i> <span>결재함</span>
 					</a></li>
 					<li><a class=""<%--href="<%=application.getContextPath()%>/resources/admin_page_resource/widgets.html"--%>>

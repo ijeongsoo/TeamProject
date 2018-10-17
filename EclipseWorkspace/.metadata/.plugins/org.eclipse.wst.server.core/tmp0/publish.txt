@@ -1,0 +1,9 @@
+#Tomcat publish data
+#Tue Oct 16 13:18:25 KST 2018
+>>>>>>>=2d2efe340d4322cb86786edb71f3f28e9ecb6762
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\\uBCD1\uD604\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\8.0.44\\tomcat-embed-websocket-8.0.44.jar=WEB-INF/lib/tomcat-embed-websocket-8.0.44.jar
+org.eclipse.jst.jee.server\:/binary\:/Users/ijeongsu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.0.44/tomcat-embed-websocket-8.0.44.jar=WEB-INF/lib/tomcat-embed-websocket-8.0.44.jar
+org.eclipse.jst.jee.server\:/binary\:/Users/ijeongsu/.m2/repository/org/springframework/spring-web/4.3.9.RELEASE/spring-web-4.3.9.RELEASE.jar=WEB-INF/lib/spring-web-4.3.9.RELEASE.jar
+<<<<<<<=HEAD
+=\=\=\=\=\=\=
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\\uBCD1\uD604\\.m2\\repository\\org\\springframework\\spring-web\\4.3.9.RELEASE\\spring-web-4.3.9.RELEASE.jar=WEB-INF/lib/spring-web-4.3.9.RELEASE.jar
