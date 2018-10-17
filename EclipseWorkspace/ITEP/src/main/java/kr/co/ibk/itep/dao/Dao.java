@@ -33,6 +33,9 @@ public interface Dao {
 	public ArrayList<EduJoinedEcd> selectDDayEdu();
 	
 	public List<Ath001m> selectAuthorityList(String searchOption, String keyword);
+
+	public ArrayList<EduJoinedEcd> selectCategoryEdu();
+
 	
-	
+
 }

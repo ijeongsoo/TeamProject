@@ -3,7 +3,6 @@ package kr.co.ibk.itep.service;
 import java.io.File;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.List;
 
 import org.springframework.stereotype.Component;
 
@@ -28,8 +27,11 @@ public interface Service {
 
 	public ArrayList<EduJoinedEcd> getDDayEdu();
 
-
+	public ArrayList<EduJoinedEcd> getCategoryEdu();
+	
 	public List<Ath001m> selectAuthorityList(String searchOption, String keyword);
+
+
 
 }
 
