@@ -24,10 +24,13 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.co.ibk.itep.dto.Ath001m;
 import kr.co.ibk.itep.dto.EduJoinedEcd;
+import kr.co.ibk.itep.dto.EmpJoinedDep;
 import kr.co.ibk.itep.service.Service;
 import kr.co.ibk.itep.dto.JoinForEdulist;
 
@@ -130,6 +133,19 @@ public class SessionedController {
 		return mv;
 	} 
 
+
+	@RequestMapping("/eduUploadExcel")
+	public String eduUploadExcel(Model model) {
+		return "eduUploadExcel";
+	} 
+	
+	@RequestMapping("/dashboard")
+	public String dashboard(Model model) {
+		return "dashboard";
+	} 
+	
+
+
 	@RequestMapping("/EduList")
 	public String EduList(String ssoid, Model model) {
 		try{
@@ -144,15 +160,27 @@ public class SessionedController {
 			return "error";
 		}
 	}
-
-	@RequestMapping("/eduUploadExcel")
-	public String eduUploadExcel(Model model) {
-		return "eduUploadExcel";
-	} 
 	
-	@RequestMapping("/dashboard")
-	public String dashboard(Model model) {
-		return "dashboard";
+	@RequestMapping("/approval")
+	public String adminApproval( Model model) {
+		
+		RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
+		EmpJoinedDep empJoinedDep = (EmpJoinedDep) requestAttributes.getAttribute("login_info",
+				RequestAttributes.SCOPE_SESSION);
+		
+		String ssoid = empJoinedDep.getEmn();
+		
+		try {
+			List<EduApproval> adminApprovalList = adminService.selectAllApprovalList();
+			model.addAttribute("adminApproval_List", adminApprovalList);
+			model.addAttribute("ssoid", ssoid);
+			return "approval";
+		}catch(Exception e){
+			logger.error(e.getStackTrace().toString());
+			model.addAttribute("result", 1);
+			return "error";
+		}
+
 	} 
 	
 }

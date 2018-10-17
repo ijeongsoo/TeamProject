@@ -37,5 +37,5 @@ public interface Dao {
 	public ArrayList<EduJoinedEcd> selectCategoryEdu();
 
 	
-	
+
 }

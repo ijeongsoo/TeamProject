@@ -1,106 +1,105 @@
 package kr.co.ibk.itep.dto;
 
 public class Edu002r {
-	private String EMN;
-	private String COURSE_CD;
-	private String STEP_CD;
-	private String STAT_CD;
-	private String ORGIN_REG_FILE_NM;
-	private String ORIGIN_PLAN_FILE_NM;
-	private String SVR_REG_FILE_NM;
-	private String SVR_PLAN_FILE_NM;
-	private String REG_FILE_TYPE;
-	private String PLAN_FILE_TYPE;
-	private String REG_ID;
-	private String REG_DT;
-	private String CHG_ID;
-	private String CHG_DT;
+	private String emn;
+	private String course_cd;
+	private String step_cd;
+	private String stat_cd;
+	private String orgin_reg_file_nm;
+	private String origin_plan_file_nm;
+	private String svr_reg_file_nm;
+	private String svr_plan_file_nm;
+	private String reg_file_type;
+	private String plan_file_type;
+	private String reg_id;
+	private String reg_dt;
+	private String chg_id;
+	private String chg_dt;
 	
-	public String getEMN() {
-		return EMN;
+	public String getEmn() {
+		return emn;
 	}
-	public void setEMN(String eMN) {
-		EMN = eMN;
+	public void setEmn(String emn) {
+		this.emn = emn;
 	}
-	public String getCOURSE_CD() {
-		return COURSE_CD;
+	public String getCourse_cd() {
+		return course_cd;
 	}
-	public void setCOURSE_CD(String cOURSE_CD) {
-		COURSE_CD = cOURSE_CD;
+	public void setCourse_cd(String course_cd) {
+		this.course_cd = course_cd;
 	}
-	public String getSTEP_CD() {
-		return STEP_CD;
+	public String getStep_cd() {
+		return step_cd;
 	}
-	public void setSTEP_CD(String sTEP_CD) {
-		STEP_CD = sTEP_CD;
+	public void setStep_cd(String step_cd) {
+		this.step_cd = step_cd;
 	}
-	public String getSTAT_CD() {
-		return STAT_CD;
+	public String getStat_cd() {
+		return stat_cd;
 	}
-	public void setSTAT_CD(String sTAT_CD) {
-		STAT_CD = sTAT_CD;
+	public void setStat_cd(String stat_cd) {
+		this.stat_cd = stat_cd;
 	}
-	public String getORGIN_REG_FILE_NM() {
-		return ORGIN_REG_FILE_NM;
+	public String getOrgin_reg_file_nm() {
+		return orgin_reg_file_nm;
 	}
-	public void setORGIN_REG_FILE_NM(String oRGIN_REG_FILE_NM) {
-		ORGIN_REG_FILE_NM = oRGIN_REG_FILE_NM;
+	public void setOrgin_reg_file_nm(String orgin_reg_file_nm) {
+		this.orgin_reg_file_nm = orgin_reg_file_nm;
 	}
-	public String getORIGIN_PLAN_FILE_NM() {
-		return ORIGIN_PLAN_FILE_NM;
+	public String getOrigin_plan_file_nm() {
+		return origin_plan_file_nm;
 	}
-	public void setORIGIN_PLAN_FILE_NM(String oRIGIN_PLAN_FILE_NM) {
-		ORIGIN_PLAN_FILE_NM = oRIGIN_PLAN_FILE_NM;
+	public void setOrigin_plan_file_nm(String origin_plan_file_nm) {
+		this.origin_plan_file_nm = origin_plan_file_nm;
 	}
-	public String getSVR_REG_FILE_NM() {
-		return SVR_REG_FILE_NM;
+	public String getSvr_reg_file_nm() {
+		return svr_reg_file_nm;
 	}
-	public void setSVR_REG_FILE_NM(String sVR_REG_FILE_NM) {
-		SVR_REG_FILE_NM = sVR_REG_FILE_NM;
+	public void setSvr_reg_file_nm(String svr_reg_file_nm) {
+		this.svr_reg_file_nm = svr_reg_file_nm;
 	}
-	public String getSVR_PLAN_FILE_NM() {
-		return SVR_PLAN_FILE_NM;
+	public String getSvr_plan_file_nm() {
+		return svr_plan_file_nm;
 	}
-	public void setSVR_PLAN_FILE_NM(String sVR_PLAN_FILE_NM) {
-		SVR_PLAN_FILE_NM = sVR_PLAN_FILE_NM;
+	public void setSvr_plan_file_nm(String svr_plan_file_nm) {
+		this.svr_plan_file_nm = svr_plan_file_nm;
 	}
-	public String getREG_FILE_TYPE() {
-		return REG_FILE_TYPE;
+	public String getReg_file_type() {
+		return reg_file_type;
 	}
-	public void setREG_FILE_TYPE(String rEG_FILE_TYPE) {
-		REG_FILE_TYPE = rEG_FILE_TYPE;
+	public void setReg_file_type(String reg_file_type) {
+		this.reg_file_type = reg_file_type;
 	}
-	public String getPLAN_FILE_TYPE() {
-		return PLAN_FILE_TYPE;
+	public String getPlan_file_type() {
+		return plan_file_type;
 	}
-	public void setPLAN_FILE_TYPE(String pLAN_FILE_TYPE) {
-		PLAN_FILE_TYPE = pLAN_FILE_TYPE;
+	public void setPlan_file_type(String plan_file_type) {
+		this.plan_file_type = plan_file_type;
 	}
-	public String getREG_ID() {
-		return REG_ID;
+	public String getReg_id() {
+		return reg_id;
 	}
-	public void setREG_ID(String rEG_ID) {
-		REG_ID = rEG_ID;
+	public void setReg_id(String reg_id) {
+		this.reg_id = reg_id;
 	}
-	public String getREG_DT() {
-		return REG_DT;
+	public String getReg_dt() {
+		return reg_dt;
 	}
-	public void setREG_DT(String rEG_DT) {
-		REG_DT = rEG_DT;
+	public void setReg_dt(String reg_dt) {
+		this.reg_dt = reg_dt;
 	}
-	public String getCHG_ID() {
-		return CHG_ID;
+	public String getChg_id() {
+		return chg_id;
 	}
-	public void setCHG_ID(String cHG_ID) {
-		CHG_ID = cHG_ID;
+	public void setChg_id(String chg_id) {
+		this.chg_id = chg_id;
 	}
-	public String getCHG_DT() {
-		return CHG_DT;
+	public String getChg_dt() {
+		return chg_dt;
 	}
-	public void setCHG_DT(String cHG_DT) {
-		CHG_DT = cHG_DT;
+	public void setChg_dt(String chg_dt) {
+		this.chg_dt = chg_dt;
 	}
-	
 	
 
 }

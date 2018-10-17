@@ -1,120 +1,119 @@
 package kr.co.ibk.itep.dto;
 
 public class Edu001m {
-	private String COURSE_CD;
-	private String ORG_CD;
-	private String CLS_CD;
-	private String COURSE_NM;
-	private int EDU_HOUR;
-	private String REG_ST_DT;
-	private String REG_ED_DT;
-	private String EDU_ST_DT;
-	private String EDU_ED_DT;
-	private int EDU_COST;
-	private String LOCATION;
-	private String REFUND_YN;
-	private String REG_ID;
-	private String REG_DT;
-	private String CHG_ID;
-	private String CHG_DT;
+	private String course_cd;
+	private String org_cd;
+	private String cls_cd;
+	private String course_nm;
+	private int edu_hour;
+	private String reg_st_dt;
+	private String reg_ed_dt;
+	private String edu_st_dt;
+	private String edu_ed_dt;
+	private int edu_cost;
+	private String location;
+	private String refund_yn;
+	private String reg_id;
+	private String reg_dt;
+	private String chg_id;
+	private String chg_dt;
 	
-	public String getCOURSE_CD() {
-		return COURSE_CD;
+	public String getCourse_cd() {
+		return course_cd;
 	}
-	public void setCOURSE_CD(String cOURSE_CD) {
-		COURSE_CD = cOURSE_CD;
+	public void setCourse_cd(String course_cd) {
+		this.course_cd = course_cd;
 	}
-	public String getORG_CD() {
-		return ORG_CD;
+	public String getOrg_cd() {
+		return org_cd;
 	}
-	public void setORG_CD(String oRG_CD) {
-		ORG_CD = oRG_CD;
+	public void setOrg_cd(String org_cd) {
+		this.org_cd = org_cd;
 	}
-	public String getCLS_CD() {
-		return CLS_CD;
+	public String getCls_cd() {
+		return cls_cd;
 	}
-	public void setCLS_CD(String cLS_CD) {
-		CLS_CD = cLS_CD;
+	public void setCls_cd(String cls_cd) {
+		this.cls_cd = cls_cd;
 	}
-	public String getCOURSE_NM() {
-		return COURSE_NM;
+	public String getCourse_nm() {
+		return course_nm;
 	}
-	public void setCOURSE_NM(String cOURSE_NM) {
-		COURSE_NM = cOURSE_NM;
+	public void setCourse_nm(String course_nm) {
+		this.course_nm = course_nm;
 	}
-	public int getEDU_HOUR() {
-		return EDU_HOUR;
+	public int getEdu_hour() {
+		return edu_hour;
 	}
-	public void setEDU_HOUR(int eDU_HOUR) {
-		EDU_HOUR = eDU_HOUR;
+	public void setEdu_hour(int edu_hour) {
+		this.edu_hour = edu_hour;
 	}
-	public String getREG_ST_DT() {
-		return REG_ST_DT;
+	public String getReg_st_dt() {
+		return reg_st_dt;
 	}
-	public void setREG_ST_DT(String rEG_ST_DT) {
-		REG_ST_DT = rEG_ST_DT;
+	public void setReg_st_dt(String reg_st_dt) {
+		this.reg_st_dt = reg_st_dt;
 	}
-	public String getREG_ED_DT() {
-		return REG_ED_DT;
+	public String getReg_ed_dt() {
+		return reg_ed_dt;
 	}
-	public void setREG_ED_DT(String rEG_ED_DT) {
-		REG_ED_DT = rEG_ED_DT;
+	public void setReg_ed_dt(String reg_ed_dt) {
+		this.reg_ed_dt = reg_ed_dt;
 	}
-	public String getEDU_ST_DT() {
-		return EDU_ST_DT;
+	public String getEdu_st_dt() {
+		return edu_st_dt;
 	}
-	public void setEDU_ST_DT(String eDU_ST_DT) {
-		EDU_ST_DT = eDU_ST_DT;
+	public void setEdu_st_dt(String edu_st_dt) {
+		this.edu_st_dt = edu_st_dt;
 	}
-	public String getEDU_ED_DT() {
-		return EDU_ED_DT;
+	public String getEdu_ed_dt() {
+		return edu_ed_dt;
 	}
-	public void setEDU_ED_DT(String eDU_ED_DT) {
-		EDU_ED_DT = eDU_ED_DT;
+	public void setEdu_ed_dt(String edu_ed_dt) {
+		this.edu_ed_dt = edu_ed_dt;
 	}
-	public int getEDU_COST() {
-		return EDU_COST;
+	public int getEdu_cost() {
+		return edu_cost;
 	}
-	public void setEDU_COST(int eDU_COST) {
-		EDU_COST = eDU_COST;
+	public void setEdu_cost(int edu_cost) {
+		this.edu_cost = edu_cost;
 	}
-	public String getLOCATION() {
-		return LOCATION;
+	public String getLocation() {
+		return location;
 	}
-	public void setLOCATION(String lOCATION) {
-		LOCATION = lOCATION;
+	public void setLocation(String location) {
+		this.location = location;
 	}
-	public String getREFUND_YN() {
-		return REFUND_YN;
+	public String getRefund_yn() {
+		return refund_yn;
 	}
-	public void setREFUND_YN(String rEFUND_YN) {
-		REFUND_YN = rEFUND_YN;
+	public void setRefund_yn(String refund_yn) {
+		this.refund_yn = refund_yn;
 	}
-	public String getREG_ID() {
-		return REG_ID;
+	public String getReg_id() {
+		return reg_id;
 	}
-	public void setREG_ID(String rEG_ID) {
-		REG_ID = rEG_ID;
+	public void setReg_id(String reg_id) {
+		this.reg_id = reg_id;
 	}
-	public String getREG_DT() {
-		return REG_DT;
+	public String getReg_dt() {
+		return reg_dt;
 	}
-	public void setREG_DT(String rEG_DT) {
-		REG_DT = rEG_DT;
+	public void setReg_dt(String reg_dt) {
+		this.reg_dt = reg_dt;
 	}
-	public String getCHG_ID() {
-		return CHG_ID;
+	public String getChg_id() {
+		return chg_id;
 	}
-	public void setCHG_ID(String cHG_ID) {
-		CHG_ID = cHG_ID;
+	public void setChg_id(String chg_id) {
+		this.chg_id = chg_id;
 	}
-	public String getCHG_DT() {
-		return CHG_DT;
+	public String getChg_dt() {
+		return chg_dt;
 	}
-	public void setCHG_DT(String cHG_DT) {
-		CHG_DT = cHG_DT;
+	public void setChg_dt(String chg_dt) {
+		this.chg_dt = chg_dt;
 	}
-	
 	
 
 }
