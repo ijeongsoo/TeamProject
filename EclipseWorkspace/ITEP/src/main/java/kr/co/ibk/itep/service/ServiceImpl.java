@@ -20,6 +20,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import kr.co.ibk.itep.dao.Dao;
+import kr.co.ibk.itep.dto.Ath001m;
 import kr.co.ibk.itep.dto.Bri001m;
 import kr.co.ibk.itep.dto.EduJoinedEcd;
 import kr.co.ibk.itep.dto.Emp001m;
@@ -91,7 +92,7 @@ public class ServiceImpl implements Service {
 	        FileOutputStream fout = null;
 	        
 	        
-	        if(!f.renameTo(newFile)){    // renameTo로 이동 실패할 경우
+	        if(!f.renameTo(newFile)){    // renameTo濡� �씠�룞 �떎�뙣�븷 寃쎌슦
 	            
 	            buf = new byte[1024];
 	            try {
@@ -161,7 +162,7 @@ public class ServiceImpl implements Service {
 	        FileOutputStream fout = null;
 	        
 	        
-	        if(!f.renameTo(newFile)){    // renameTo로 이동 실패할 경우
+	        if(!f.renameTo(newFile)){    // renameTo濡� �씠�룞 �떎�뙣�븷 寃쎌슦
 	            
 	            buf = new byte[1024];
 	            try {
@@ -203,5 +204,16 @@ public class ServiceImpl implements Service {
 		ArrayList<EduJoinedEcd> list = dao.selectDDayEdu();
 		return list;
 	}
+
+	@Override
+	public List<Ath001m> selectAuthorityList(String searchOption, String keyword) {
+
+		List<Ath001m> list = dao.selectAuthorityList(searchOption, keyword);
+		return list;
+	}
+
+
+	
+
 
 }
