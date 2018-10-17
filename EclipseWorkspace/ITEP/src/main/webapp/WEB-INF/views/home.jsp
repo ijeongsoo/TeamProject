@@ -6,72 +6,116 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
+	<head>
+		<meta charset="UTF-8">
 <!-- 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
- -->
-<meta name="description" content="">
-<meta name="author" content="">
+ -->		<meta name="description" content="">
+		<meta name="author" content="">
+		
+	    <title >IT그룹 교육 포탈</title>
+	    
+  		<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.js"></script>
+	
+		<link href="<%=application.getContextPath()%>/resources/main_page_resource/css/style.css" rel="stylesheet">
 
-<title>IT그룹 교육 포탈</title>
+		    <!-- Bootstrap core CSS -->
+     	<link href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		
+	    <!-- Custom fonts for this template -->
+	    <link href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-<script
-	src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.js"></script>
+	    <!-- Plugin CSS -->
+	    <link href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+	
+	    <!-- Custom styles for this template -->
+	    <link href="<%=application.getContextPath()%>/resources/main_page_resource/css/freelancer.css" rel="stylesheet">
+    
 
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/css/style.css"
-	rel="stylesheet">
+		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.carousel.css" rel="stylesheet" media="screen" />
+		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.theme.css" rel="stylesheet" media="screen" />
+		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/style.css" rel="stylesheet">
+		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/color/default.css" rel="stylesheet">
+		 <link href="<%=application.getContextPath()%>/resources/css/itep.css" rel="stylesheet" type="text/css">
+		    	
 
-<!-- Bootstrap core CSS -->
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/bootstrap/css/bootstrap.min.css"
-	rel="stylesheet">
-
-<!-- Custom fonts for this template -->
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/fontawesome-free/css/all.min.css"
-	rel="stylesheet" type="text/css">
-
-<!-- Plugin CSS -->
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/magnific-popup/magnific-popup.css"
-	rel="stylesheet" type="text/css">
-
-<!-- Custom styles for this template -->
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/css/freelancer.min.css"
-	rel="stylesheet">
-
-
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.carousel.css"
-	rel="stylesheet" media="screen" />
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.theme.css"
-	rel="stylesheet" media="screen" />
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/style.css"
-	rel="stylesheet">
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/sub/color/default.css"
-	rel="stylesheet">
-<link href="<%=application.getContextPath()%>/resources/css/itep.css"
-	rel="stylesheet" type="text/css">
-
-
-
-<script>
+    	
+    	<script>
     		// 관리자만 보이게    		
 			$( function() {
 				if(${login_info.auth_cd} !='04'){
 					$("#adminButton").attr('style', 'visiblity:show');
 				}
-			} );
+				
+				if($('.ddayCount').length == 0){
+		        	$("#ddayExist").attr('style', 'display:inline; text-align:center');
+		        }else{
+		        	$("#ddayExist").attr('style', 'display:none');
+		        }
+				
+				if($('.top8List1ContentCount').length == 0){
+					$("#top8List1").remove();
+					$("#top8Exist").attr('style', 'display:inline; text-align:center');
+		        }else{
+		        	$("#top8Exist").attr('style','display:none');
+
+		        }
+				
+				if($('.top8List2ContentCount').length == 0){
+										
+					$("#top8List2").remove();
+		        }
+	       
+				
+			});
+    		
+			$(document).ready(function(){
+				
+				if($('.filter').length == 0){
+		        	$("#categoryExist").attr('style', 'display:inline; text-align:center')
+		        }else{
+		        	$("#categoryExist").attr('style', 'display:none')
+		        }
+
+			    $(".filter-button").click(function(){
+			        var value = $(this).attr('data-filter');
+			        
+			        if(value == "all")
+			        {
+			        	if($('.filter').length == 0){
+				        	$("#categoryExist").attr('style', 'display:inline; text-align:center')
+				        }else{
+				        	$("#categoryExist").attr('style', 'display:none')
+				        }
+			            //$('.filter').removeClass('hidden');
+			            $('.filter').show('1000');
+			        }
+			        else
+			        {
+			        	
+			        	if($('.'+value).length == 0){
+				        	$("#categoryExist").attr('style', 'display:inline; text-align:center')
+				        }else{
+				        	$("#categoryExist").attr('style', 'display:none')
+				        }
+//			            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//			            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+			            $(".filter").not('.'+value).hide('3000');
+			            $('.filter').filter('.'+value).show('3000');
+			            
+			        }
+			    });
+			    
+			    if ($(".filter-button").removeClass("active")) {
+						$(this).removeClass("active");
+				}
+				$(this).addClass("active");
+
+			});
 
     		
     	</script>
-
-</head>
+    	
+	</head>
 <body id="page-top">
 
 	<!-- Navigation -->
@@ -141,11 +185,10 @@
 			<div class="row flyIn">
 				<div class="col-lg-12">
 					<div class="testimonialslide  ">
-						<ul class="slides">
-
+						<ul class="slides" id="top8List1">
 							<li style="text-align: center;"><c:forEach var="d"
 									items="${top8List1}" varStatus="status">
-									<div style="display: inline-table; width: 20%; padding: 30px">
+									<div class="top8List1ContentCount" style="display: inline-table; width: 20%; padding: 30px">
 										<a href="img/works/1.jpg" title="This is an image title"
 											data-lightbox-gallery="gallery1"
 											data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
@@ -170,9 +213,9 @@
 										</a>
 									</div>
 								</c:forEach></li>
-							<li style="text-align: center;"><c:forEach var="d"
+								<li id="top8List2" style="text-align: center; "><c:forEach var="d"
 									items="${top8List2}" varStatus="status">
-									<div style="display: inline-table; width: 23%; padding: 20px">
+									<div class="top8List2ContentCount" style="display: inline-table; width: 23%; padding: 20px">
 										<a href="img/works/1.jpg" title="This is an image title"
 											data-lightbox-gallery="gallery1"
 											data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
@@ -197,7 +240,15 @@
 										</a>
 									</div>
 								</c:forEach></li>
+								
+								
 						</ul>
+						
+						<div id='top8Exist' style="text-align:center ; display: none">
+									<div  style="width: 1100px; height: 150px; margin-left:  20px; margin-right :  20px ; margin-bottom: 20px ">
+									<h1 class='hanna'>현재 신청가능한 교육이 없습니다.</h1>
+									</div>
+						</div>
 
 					</div>
 				</div>
@@ -212,7 +263,7 @@
 					<div class="">
 						<div id="owl-works" class="">
 							<c:forEach var="d" items="${ddayList }" varStatus="status">
-								<div class="">
+								<div class="ddayCount">
 									<a href="img/works/1.jpg" title="This is an image title"
 										data-lightbox-gallery="gallery1"
 										data-lightbox-hidpi="resources/main_page_resource/sub/img/works/1@2x.jpg">
@@ -237,10 +288,51 @@
 									</a>
 								</div>
 							</c:forEach>
+							<div id='ddayExist' style="text-align:center ; display: none">
+								<div  style="width: 1100px; height: 150px; margin-left:  20px; margin-right :  20px ; margin-bottom: 20px ">
+								<h1 class='hanna'>1주일 이내로 마감되는 교육이 없습니다.</h1>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			
+			<h3 class="hanna text-uppercase text-secondary mb-0">카테고리별 교육</h3>
+			<div class="">
+			
+
+			<div style="text-align: center; margin-bottom: 0px">
+        		<div >
+            	<button class="btn btn-default filter-button" data-filter="all">모든교육</button>
+            	<button class="btn btn-default filter-button" data-filter="3">신입</button>
+            	<button class="btn btn-default filter-button" data-filter="2">내부</button>
+            	<button class="btn btn-default filter-button" data-filter="1">외부</button>
+        		</div>
+        	</div>
+        	<br/>
+
+
+		<div class="row flyIn" id="services">
+			<c:forEach var="d" items="${categoryList}" varStatus="status">
+				<div class="span3 animated-fast  filter ${d.high_cls_cd}" style="width: 240px; height: 320px; margin-left:  20px; margin-right :  20px ; margin-bottom: 20px ">
+					<div class="service-box" style="width: 240px; height: 320px; ">
+						<img class="photo3" style="width: 150px; height: 150px" src="<%=application.getContextPath()%>/file?svr_img_file_nm=${d.svr_img_file_nm}&mfiletype=${d.img_file_type}" alt="" />
+						<h2 class="hanna hidden">${d.course_nm}</h2>
+						<p class="hanna hidden" style="padding-top: 0px">
+							${d.org_nm} <br> ${d.edu_st_dt}~ ${d.edu_ed_dt }
+						</p>
+					</div>
+				</div>
+			</c:forEach>
+				<div id='categoryExist' style="text-align:center ; display: none">
+					<div  style="width: 1100px; height: 150px; margin-left:  20px; margin-right :  20px ; margin-bottom: 20px ">
+					<h1 class='hanna'>   해당 카테고리 신청가능한 교육이 없습니다.</h1>
+					</div>
+				</div>
+				
+            </div>
+        </div>
 
 		</div>
 	</section>
@@ -620,9 +712,3 @@
 
 </body>
 </html>
-
-
-
-
-
-

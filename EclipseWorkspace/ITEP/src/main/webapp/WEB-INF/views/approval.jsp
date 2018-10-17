@@ -49,12 +49,19 @@
 	<script>
 		$(document).ready( function () {
 	    	$('#approvalTable').DataTable();
+	    	
+	        $("#adminPM").on("click", function(e){ //결재하기 버튼
+	            e.preventDefault();
+	            fn_pmApproval();
+	        });
 		} );
-	</script>
-	<script type="text/javascript">
-		function pmApproval() {
-			
+		
+		function fn_pmApproval(){
+		    var comSubmit = new ComSubmit("approvalTable");
+		    //comSubmit.setUrl("<c:url value='/updateApproval' />");
+		    comSubmit.submit();
 		}
+		
 	</script>
 	
 <body>
@@ -131,26 +138,26 @@
           </div>
         </div>
  		<div class="container" align="right" style="height:40px;">
- 			<input type="button" value="결재" onclick="pmApproval()">
+ 			<input id="adminPM" type="button" value="결재">
  		</div>
  		<div class="container">
 			<table id="approvalTable" class="display" style="width:100%; text-align:center;" >
 				<thead>
 					<tr>
 						<th><input type='checkbox' name="listCheckbox" value="ALL" onClick="selectCheckBox(this, 'listCheckbox');"></th>
-						<th>직원번호</th>
-						<th>기관명</th>
-						<th>소분류</th>
+						<th style="text-align: center;">직원번호</th>
+						<th style="text-align: center;">기관명</th>
+						<th style="text-align: center;">소분류</th>
 						<th style="text-align: center;">과정명</th>
-						<th>교육시간</th>
-						<th>신청시작일</th>
-						<th>신청마감일</th>
-						<th>교육시작일</th>
-						<th>교육종료일</th>
-						<th>교육비</th>
-						<th>교육장소</th>
-						<th>환급여부</th>
-						<th>결재 상황</th>
+						<th style="text-align: center;">교육시간</th>
+						<th style="text-align: center;">신청시작일</th>
+						<th style="text-align: center;">신청마감일</th>
+						<th style="text-align: center;">교육시작일</th>
+						<th style="text-align: center;">교육종료일</th>
+						<th style="text-align: center;">교육비</th>
+						<th style="text-align: center;">교육장소</th>
+						<th style="text-align: center;">환급여부</th>
+						<th style="text-align: center;">결재 상황</th>
 					</tr>
 				</thead>
 				<tbody>
