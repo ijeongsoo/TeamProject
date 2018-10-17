@@ -20,6 +20,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import kr.co.ibk.itep.dao.Dao;
+import kr.co.ibk.itep.dto.Ath001m;
 import kr.co.ibk.itep.dto.Bri001m;
 import kr.co.ibk.itep.dto.EduJoinedEcd;
 import kr.co.ibk.itep.dto.Emp001m;
@@ -209,6 +210,12 @@ public class ServiceImpl implements Service {
 	public ArrayList<EduJoinedEcd> getCategoryEdu() {
 		ArrayList<EduJoinedEcd> list = dao.selectCategoryEdu();
 		return list;
+	}
+
+	@Override
+	public List<Ath001m> selectAuthorityList(String searchOption, String keyword) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 

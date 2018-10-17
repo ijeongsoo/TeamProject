@@ -171,8 +171,8 @@ public class SessionedController {
 		String ssoid = empJoinedDep.getEmn();
 		
 		try {
-			List<EduApproval> adminApprovalList = adminService.selectAllApprovalList();
-			model.addAttribute("adminApproval_List", adminApprovalList);
+			//List<EduApproval> adminApprovalList = adminService.selectAllApprovalList();
+			//model.addAttribute("adminApproval_List", adminApprovalList);
 			model.addAttribute("ssoid", ssoid);
 			return "approval";
 		}catch(Exception e){
