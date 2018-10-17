@@ -34,5 +34,13 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="src/main/resources/curvesapi-1.05.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/poi-4.0.0.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/poi-examples-4.0.0.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/poi-excelant-4.0.0.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/poi-ooxml-4.0.0.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/poi-ooxml-schemas-4.0.0.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/poi-scratchpad-4.0.0.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/xmlbeans-3.0.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
