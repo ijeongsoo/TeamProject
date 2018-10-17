@@ -87,6 +87,20 @@ public class DaoImpl implements Dao {
 		return (ArrayList<EduJoinedEcd>) list;
 	}
 
-	
+
+	@Override
+	public List<Ath001m> selectAuthorityList(String searchOption, String keyword) {
+		// TODO Auto-generated method stub
+		List<Ath001m> list = sst.selectList("ath001m.listAll");
+		
+		return list;
+	}
+
+	@Override
+	public ArrayList<EduJoinedEcd> selectCategoryEdu() {
+		List<EduJoinedEcd> list = sst.selectList("edu001m.selectCategoryEdu");
+		return (ArrayList<EduJoinedEcd>) list;
+	}
 
 }
+

@@ -9,6 +9,12 @@ import kr.co.ibk.itep.dto.*;
 @Component
 public interface AdminApprovalService {
 	
-	public ArrayList<EduApproval> selectAllApprovalList();
+	public ArrayList<EduApproval> selectDepApprovalList(String emn);
+	
+	public void updateDepFirstApproval(EduApproval edulist);
+	
+	public void updateDepSecondApproval(EduApproval edulist);
+	
+	public void updateDepFinalApproval(EduApproval edulist);
 	
 }

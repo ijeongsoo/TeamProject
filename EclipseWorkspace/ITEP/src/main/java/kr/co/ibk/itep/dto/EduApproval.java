@@ -17,6 +17,7 @@ public class EduApproval {
 	private String loc;
 	private String refund_yn;
 	private String step_nm;
+	private String course_cd;
 	
 	public String getEmn() {
 		return emn;
@@ -107,6 +108,13 @@ public class EduApproval {
 	}
 	public void setStep_nm(String step_nm) {
 		this.step_nm = step_nm;
+	}
+	public String getCourse_cd() {
+		return course_cd;
+	}
+	public void setCourse_cd(String course_cd) {
+		this.course_cd = course_cd;
 	}	
+	
 	
 }

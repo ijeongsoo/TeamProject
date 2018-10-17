@@ -45,6 +45,33 @@
     				order by count(emn) desc)
 			where rownum &lt; 9
 	</select>
+	
+	<select id= "selectCategoryEdu" resultType="kr.co.ibk.itep.dto.EduJoinedEcd" >
+		select a.course_cd, a.high_cls_cd, a.mid_cls_cd, a.low_cls_cd, b.org_nm, a.course_nm, a.edu_st_dt, a.edu_ed_dt,a.svr_img_file_nm,a.img_file_type 
+		from tb_iep_edu001m a,TB_IEP_ECD002M b 
+		where a.org_cd = b.org_cd
+		and sysdate &gt;= a.REG_ST_DT and sysdate &lt;= a.reg_ed_dt
+		and high_cls_cd = '1'
+		and rownum &lt;5
+		
+		union all 
+		
+		select a.course_cd, a.high_cls_cd, a.mid_cls_cd, a.low_cls_cd, b.org_nm, a.course_nm, a.edu_st_dt, a.edu_ed_dt,a.svr_img_file_nm,a.img_file_type 
+		from tb_iep_edu001m a,TB_IEP_ECD002M b 
+		where a.org_cd = b.org_cd
+		and sysdate &gt;= a.REG_ST_DT and sysdate &lt;= a.reg_ed_dt
+		and high_cls_cd = '2'
+		and rownum &lt;5
+		
+		union all
+		
+		select a.course_cd, a.high_cls_cd, a.mid_cls_cd, a.low_cls_cd, b.org_nm, a.course_nm, a.edu_st_dt, a.edu_ed_dt,a.svr_img_file_nm,a.img_file_type 
+		from tb_iep_edu001m a,TB_IEP_ECD002M b 
+		where a.org_cd = b.org_cd
+		and sysdate &gt;= a.REG_ST_DT and sysdate &lt;= a.reg_ed_dt
+		and high_cls_cd = '3'
+		and rownum &lt;5
+	</select>
  	
  	<delete id= "deleteAll" >
  		delete from TB_IEP_EDU001M
