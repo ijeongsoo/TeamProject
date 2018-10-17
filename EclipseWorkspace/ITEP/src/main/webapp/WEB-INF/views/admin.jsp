@@ -343,7 +343,7 @@
             </ul>
           </li>
           <li>
-            <a class="" <%-- href="<%=application.getContextPath()%>/resources/admin_page_resource/widgets.html"--%>>
+            <a class="" href="approval"> 
                           <i class="icon_desktop"></i>
                           <span>결재함</span>
                       </a>

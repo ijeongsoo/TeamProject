@@ -1,50 +1,48 @@
 package kr.co.ibk.itep.dto;
 
 public class Ecd004m {
-	private String STAT_CD;
-	private String STAT_NM;
-	private String REG_ID;
-	private String REG_DT;
-	private String CHG_ID;
-	private String CHG_DT;
+	private String stat_cd;
+	private String stat_nm;
+	private String reg_id;
+	private String reg_dt;
+	private String chg_id;
+	private String chg_dt;
 	
-	public String getSTAT_CD() {
-		return STAT_CD;
+	public String getStat_cd() {
+		return stat_cd;
 	}
-	public void setSTAT_CD(String sTAT_CD) {
-		STAT_CD = sTAT_CD;
+	public void setStat_cd(String stat_cd) {
+		this.stat_cd = stat_cd;
 	}
-	public String getSTAT_NM() {
-		return STAT_NM;
+	public String getStat_nm() {
+		return stat_nm;
 	}
-	public void setSTAT_NM(String sTAT_NM) {
-		STAT_NM = sTAT_NM;
+	public void setStat_nm(String stat_nm) {
+		this.stat_nm = stat_nm;
 	}
-	public String getREG_ID() {
-		return REG_ID;
+	public String getReg_id() {
+		return reg_id;
 	}
-	public void setREG_ID(String rEG_ID) {
-		REG_ID = rEG_ID;
+	public void setReg_id(String reg_id) {
+		this.reg_id = reg_id;
 	}
-	public String getREG_DT() {
-		return REG_DT;
+	public String getReg_dt() {
+		return reg_dt;
 	}
-	public void setREG_DT(String rEG_DT) {
-		REG_DT = rEG_DT;
+	public void setReg_dt(String reg_dt) {
+		this.reg_dt = reg_dt;
 	}
-	public String getCHG_ID() {
-		return CHG_ID;
+	public String getChg_id() {
+		return chg_id;
 	}
-	public void setCHG_ID(String cHG_ID) {
-		CHG_ID = cHG_ID;
+	public void setChg_id(String chg_id) {
+		this.chg_id = chg_id;
 	}
-	public String getCHG_DT() {
-		return CHG_DT;
+	public String getChg_dt() {
+		return chg_dt;
 	}
-	public void setCHG_DT(String cHG_DT) {
-		CHG_DT = cHG_DT;
+	public void setChg_dt(String chg_dt) {
+		this.chg_dt = chg_dt;
 	}
 	
-	
-
 }

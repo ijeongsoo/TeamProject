@@ -26,8 +26,10 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 
+import kr.co.ibk.itep.dto.EduApproval;
 import kr.co.ibk.itep.dto.EduJoinedEcd;
 import kr.co.ibk.itep.dto.EmpJoinedDep;
+import kr.co.ibk.itep.service.AdminApprovalService;
 import kr.co.ibk.itep.service.Service;
 import kr.co.ibk.itep.dto.JoinForEdulist;
 
@@ -40,6 +42,9 @@ public class SessionedController {
 	
 	@Autowired
 	private Service service;
+	
+	@Autowired
+	private AdminApprovalService adminService;
 	
 	@Autowired
 	private ServletContext servletContext;
@@ -125,5 +130,27 @@ public class SessionedController {
 			return "error";
 		}
 	}
+	
+	@RequestMapping("/approval")
+	public String adminApproval( Model model) {
+		
+		RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
+		EmpJoinedDep empJoinedDep = (EmpJoinedDep) requestAttributes.getAttribute("login_info",
+				RequestAttributes.SCOPE_SESSION);
+		
+		String ssoid = empJoinedDep.getEmn();
+		
+		try {
+			List<EduApproval> adminApprovalList = adminService.selectAllApprovalList();
+			model.addAttribute("adminApproval_List", adminApprovalList);
+			model.addAttribute("ssoid", ssoid);
+			return "approval";
+		}catch(Exception e){
+			logger.error(e.getStackTrace().toString());
+			model.addAttribute("result", 1);
+			return "error";
+		}
+
+	} 
 	
 }
