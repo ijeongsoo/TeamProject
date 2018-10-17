@@ -6,61 +6,40 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
+	<head>
+		<meta charset="UTF-8">
 <!-- 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
- -->
-<meta name="description" content="">
-<meta name="author" content="">
+ -->		<meta name="description" content="">
+		<meta name="author" content="">
+		
+	    <title >IT그룹 교육 포탈</title>
+	    
+  		<script src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.js"></script>
+	
+		<link href="<%=application.getContextPath()%>/resources/main_page_resource/css/style.css" rel="stylesheet">
 
-<title>IT그룹 교육 포탈</title>
+		    <!-- Bootstrap core CSS -->
+     	<link href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		
+	    <!-- Custom fonts for this template -->
+	    <link href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-<script
-	src="<%=application.getContextPath()%>/resources/main_page_resource/js/jquery.js"></script>
+	    <!-- Plugin CSS -->
+	    <link href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+	
+	    <!-- Custom styles for this template -->
+	    <link href="<%=application.getContextPath()%>/resources/main_page_resource/css/freelancer.css" rel="stylesheet">
+    
 
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/css/style.css"
-	rel="stylesheet">
+		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.carousel.css" rel="stylesheet" media="screen" />
+		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.theme.css" rel="stylesheet" media="screen" />
+		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/style.css" rel="stylesheet">
+		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/color/default.css" rel="stylesheet">
+		 <link href="<%=application.getContextPath()%>/resources/css/itep.css" rel="stylesheet" type="text/css">
+		    	
 
-<!-- Bootstrap core CSS -->
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/bootstrap/css/bootstrap.min.css"
-	rel="stylesheet">
-
-<!-- Custom fonts for this template -->
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/fontawesome-free/css/all.min.css"
-	rel="stylesheet" type="text/css">
-
-<!-- Plugin CSS -->
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/magnific-popup/magnific-popup.css"
-	rel="stylesheet" type="text/css">
-
-<!-- Custom styles for this template -->
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/css/freelancer.min.css"
-	rel="stylesheet">
-
-
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.carousel.css"
-	rel="stylesheet" media="screen" />
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.theme.css"
-	rel="stylesheet" media="screen" />
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/style.css"
-	rel="stylesheet">
-<link
-	href="<%=application.getContextPath()%>/resources/main_page_resource/sub/color/default.css"
-	rel="stylesheet">
-<link href="<%=application.getContextPath()%>/resources/css/itep.css"
-	rel="stylesheet" type="text/css">
-
-
-
-<script>
+    	
+    	<script>
     		// 관리자만 보이게    		
 			$( function() {
 				if(${login_info.auth_cd} !='04'){
@@ -135,8 +114,8 @@
 
     		
     	</script>
-
-</head>
+    	
+	</head>
 <body id="page-top">
 
 	<!-- Navigation -->

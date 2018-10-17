@@ -1,63 +1,63 @@
 package kr.co.ibk.itep.dto;
 
 public class Ecd001m {
-	private String CLS_CD;
-	private String HIGH_CLS;
-	private String MID_CLS;
-	private String LOW_CLS;
-	private String REG_ID;
-	private String REG_DT;
-	private String CHG_ID;
-	private String CHG_DT;
+	private String cls_cd;
+	private String high_cls;
+	private String mid_cls;
+	private String low_cls;
+	private String reg_id;
+	private String reg_dt;
+	private String chg_id;
+	private String chg_dt;
 	
-	public String getCLS_CD() {
-		return CLS_CD;
+	public String getCls_cd() {
+		return cls_cd;
 	}
-	public void setCLS_CD(String cLS_CD) {
-		CLS_CD = cLS_CD;
+	public void setCls_cd(String cls_cd) {
+		this.cls_cd = cls_cd;
 	}
-	public String getHIGH_CLS() {
-		return HIGH_CLS;
+	public String getHigh_cls() {
+		return high_cls;
 	}
-	public void setHIGH_CLS(String hIGH_CLS) {
-		HIGH_CLS = hIGH_CLS;
+	public void setHigh_cls(String high_cls) {
+		this.high_cls = high_cls;
 	}
-	public String getMID_CLS() {
-		return MID_CLS;
+	public String getMid_cls() {
+		return mid_cls;
 	}
-	public void setMID_CLS(String mID_CLS) {
-		MID_CLS = mID_CLS;
+	public void setMid_cls(String mid_cls) {
+		this.mid_cls = mid_cls;
 	}
-	public String getLOW_CLS() {
-		return LOW_CLS;
+	public String getLow_cls() {
+		return low_cls;
 	}
-	public void setLOW_CLS(String lOW_CLS) {
-		LOW_CLS = lOW_CLS;
+	public void setLow_cls(String low_cls) {
+		this.low_cls = low_cls;
 	}
-	public String getREG_ID() {
-		return REG_ID;
+	public String getReg_id() {
+		return reg_id;
 	}
-	public void setREG_ID(String rEG_ID) {
-		REG_ID = rEG_ID;
+	public void setReg_id(String reg_id) {
+		this.reg_id = reg_id;
 	}
-	public String getREG_DT() {
-		return REG_DT;
+	public String getReg_dt() {
+		return reg_dt;
 	}
-	public void setREG_DT(String rEG_DT) {
-		REG_DT = rEG_DT;
+	public void setReg_dt(String reg_dt) {
+		this.reg_dt = reg_dt;
 	}
-	public String getCHG_ID() {
-		return CHG_ID;
+	public String getChg_id() {
+		return chg_id;
 	}
-	public void setCHG_ID(String cHG_ID) {
-		CHG_ID = cHG_ID;
+	public void setChg_id(String chg_id) {
+		this.chg_id = chg_id;
 	}
-	public String getCHG_DT() {
-		return CHG_DT;
+	public String getChg_dt() {
+		return chg_dt;
 	}
-	public void setCHG_DT(String cHG_DT) {
-		CHG_DT = cHG_DT;
+	public void setChg_dt(String chg_dt) {
+		this.chg_dt = chg_dt;
 	}
-
+	
 	
 }

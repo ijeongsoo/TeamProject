@@ -4,14 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import kr.co.ibk.itep.dto.Ath001m;
 import kr.co.ibk.itep.dto.EduJoinedEcd;
-import kr.co.ibk.itep.dto.Emp001m;
 import kr.co.ibk.itep.dto.EmpJoinedDep;
 import kr.co.ibk.itep.dto.JoinForEdulist;
 
@@ -88,6 +86,7 @@ public class DaoImpl implements Dao {
 		List<EduJoinedEcd> list = sst.selectList("edu001m.selectCategoryEdu");
 		return (ArrayList<EduJoinedEcd>) list;
 	}
+
 	
 
 }

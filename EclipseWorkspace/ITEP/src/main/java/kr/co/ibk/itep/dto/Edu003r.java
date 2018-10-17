@@ -1,65 +1,62 @@
 package kr.co.ibk.itep.dto;
 
 public class Edu003r {
-	private String EMN;
-	private String COURSE_CD;
-	private int SUR_POINT;
-	private String OPINION;
-	private String REG_ID;
-	private String REG_DT;
-	private String CHG_ID;
-	private String CHG_DT;
+	private String emn;
+	private String course_cd;
+	private int sur_point;
+	private String opinion;
+	private String reg_id;
+	private String reg_dt;
+	private String chg_id;
+	private String chg_dt;
 	
-	public String getEMN() {
-		return EMN;
+	public String getEmn() {
+		return emn;
 	}
-	public void setEMN(String eMN) {
-		EMN = eMN;
+	public void setEmn(String emn) {
+		this.emn = emn;
 	}
-	public String getCOURSE_CD() {
-		return COURSE_CD;
+	public String getCourse_cd() {
+		return course_cd;
 	}
-	public void setCOURSE_CD(String cOURSE_CD) {
-		COURSE_CD = cOURSE_CD;
+	public void setCourse_cd(String course_cd) {
+		this.course_cd = course_cd;
 	}
-	public int getSUR_POINT() {
-		return SUR_POINT;
+	public int getSur_point() {
+		return sur_point;
 	}
-	public void setSUR_POINT(int sUR_POINT) {
-		SUR_POINT = sUR_POINT;
+	public void setSur_point(int sur_point) {
+		this.sur_point = sur_point;
 	}
-	public String getOPINION() {
-		return OPINION;
+	public String getOpinion() {
+		return opinion;
 	}
-	public void setOPINION(String oPINION) {
-		OPINION = oPINION;
+	public void setOpinion(String opinion) {
+		this.opinion = opinion;
 	}
-	public String getREG_ID() {
-		return REG_ID;
+	public String getReg_id() {
+		return reg_id;
 	}
-	public void setREG_ID(String rEG_ID) {
-		REG_ID = rEG_ID;
+	public void setReg_id(String reg_id) {
+		this.reg_id = reg_id;
 	}
-	public String getREG_DT() {
-		return REG_DT;
+	public String getReg_dt() {
+		return reg_dt;
 	}
-	public void setREG_DT(String rEG_DT) {
-		REG_DT = rEG_DT;
+	public void setReg_dt(String reg_dt) {
+		this.reg_dt = reg_dt;
 	}
-	public String getCHG_ID() {
-		return CHG_ID;
+	public String getChg_id() {
+		return chg_id;
 	}
-	public void setCHG_ID(String cHG_ID) {
-		CHG_ID = cHG_ID;
+	public void setChg_id(String chg_id) {
+		this.chg_id = chg_id;
 	}
-	public String getCHG_DT() {
-		return CHG_DT;
+	public String getChg_dt() {
+		return chg_dt;
 	}
-	public void setCHG_DT(String cHG_DT) {
-		CHG_DT = cHG_DT;
+	public void setChg_dt(String chg_dt) {
+		this.chg_dt = chg_dt;
 	}
 	
-	
-	
-
 }
