@@ -7,7 +7,7 @@
 	String execute = request.getParameter("execute");
 	String filePath = request.getParameter("fileAttach");
 	ExcelManager em = new ExcelManager(filePath);
-	String course_cd = em.getEduList().get(0).getCOURSE_CD();
+	String course_cd = em.getEduList().get(0).getCOURSE_CD(); 
 %>
 <head>
   <meta charset="utf-8">

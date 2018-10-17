@@ -28,7 +28,7 @@
 	    <link href="<%=application.getContextPath()%>/resources/main_page_resource/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 	
 	    <!-- Custom styles for this template -->
-	    <link href="<%=application.getContextPath()%>/resources/main_page_resource/css/freelancer.css" rel="stylesheet">
+	    <link href="<%=application.getContextPath()%>/resources/main_page_resource/css/freelancer.min.css" rel="stylesheet">
     
 
 		  <link href="<%=application.getContextPath()%>/resources/main_page_resource/sub/css/owl.carousel.css" rel="stylesheet" media="screen" />
@@ -288,12 +288,13 @@
 									</a>
 								</div>
 							</c:forEach>
-							<div id='ddayExist' style="text-align:center ; display: none">
+							
+						</div>
+						<div id='ddayExist' style="text-align:center ; display: none">
 								<div  style="width: 1100px; height: 150px; margin-left:  20px; margin-right :  20px ; margin-bottom: 20px ">
 								<h1 class='hanna'>1주일 이내로 마감되는 교육이 없습니다.</h1>
 								</div>
 							</div>
-						</div>
 					</div>
 				</div>
 			</div>
